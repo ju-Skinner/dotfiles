@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/Users/julianskinner/_hacking'
+let g:netrw_dirhist_2='/Users/julianskinner/_hacking/my_fork'
+let g:netrw_dirhist_3='/Users/julianskinner/_hacking'
+let g:netrw_dirhist_4='/Users/julianskinner'
+let g:netrw_dirhist_5='/Users/julianskinner/vim_tutorial'
+let g:netrw_dirhist_6='/Users/julianskinner'
