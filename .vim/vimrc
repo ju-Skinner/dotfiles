@@ -101,28 +101,6 @@ nnoremap <leader><leader> <c-^>
 noremap j gj
 noremap k gk
 
-" Plugin settings:
-" Below are some sane defaults for a couple of the above plugins
-
-" Remap ctrlp to ctrl-t - map however you like, but this is common to Atom
-" sublime, and textmate for fuzzy search
-let g:ctrlp_map = '<c-t>'
-map <leader>t <c-t>
-
-" let ctrlp have up to 30 results
-let g:ctrlp_max_height = 30
-
-" configure ag.vim to always search from your project root instead of
-" current working directory
-let g:ag_working_path_mode="r"
-
-" RSpec
-let g:rspec_command = "Dispatch bundle exec rspec --format=progress {spec}"
-map <leader>rf :call RunCurrentSpecFile()<CR>
-map <leader>rs :call RunNearestSpec()<CR>
-map <leader>rl :call RunLastSpec()<CR>
-map <leader>ra :call RunAllSpecs()<CR>
-
 " set the runtime path to include Vundle and intialize
 set rtp+=~/.vim/bundle/Vundle.vim
 
@@ -176,6 +154,28 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'airblade/vim-gitgutter'
 
 call vundle#end()
+
+" Plugin settings:
+" Below are some sane defaults for a couple of the above plugins
+
+" Remap ctrlp to ctrl-t - map however you like, but this is common to Atom
+" sublime, and textmate for fuzzy search
+let g:ctrlp_map = '<c-t>'
+map <leader>t <c-t>
+
+" let ctrlp have up to 30 results
+let g:ctrlp_max_height = 30
+
+" configure ag.vim to always search from your project root instead of
+" current working directory
+let g:ag_working_path_mode="r"
+
+" RSpec
+let g:rspec_command = "Dispatch bundle exec rspec --format=progress {spec}"
+map <leader>rf :call RunCurrentSpecFile()<CR>
+map <leader>rs :call RunNearestSpec()<CR>
+map <leader>rl :call RunLastSpec()<CR>
+map <leader>ra :call RunAllSpecs()<CR>
 
 " Finally the color scheme
 set bg=dark
