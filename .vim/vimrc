@@ -150,7 +150,7 @@ Plugin 'bling/vim-airline'
 
 " Vim plugin for the_silver_searcher, 'ag', a replacement for the Perl module /
 " CLI script 'ack'
-Plugin 'ag.vim'             " http://github.com/rking/ag.vim
+Plugin 'rking/ag.vim'             " http://github.com/rking/ag.vim
 
 " rails.vim: Ruby on Rails power tools
 Plugin 'tpope/vim-rails'
