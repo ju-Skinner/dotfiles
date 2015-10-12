@@ -3,8 +3,8 @@ filetype off
 
 " Automatic formatting
 autocmd BufWritePre *.rb :%s/\s\+$//e
-autocmd BufWritePre *.html :%/\s\+$//e
-autocmd BufWritePre *.html :%/\s\+$//e
+autocmd BufWritePre *.html :%s/\s\+$//e
+autocmd BufWritePre *.html :%s/\s\+$//e
 au BufRead,BufNewFile Rakefile setf ruby
 au BufRead,BufNewFile Guardfile setf ruby
 au BufRead,BufNewFile Gemfile setf ruby
