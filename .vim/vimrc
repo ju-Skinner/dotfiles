@@ -143,6 +143,9 @@ Plugin 'tpope/vim-surround'
 " http://www.vim.org/scripts/script.php?script_id=4504
 Plugin 'tpope/vim-dispatch'
 
+" Git wrapper so awesome, it should be illegal
+Plugin 'tpope/vim-fugitive'
+
 " Run Rspec specs from Vim https://robots.thoughtbot.com
 Plugin 'thoughtbot/vim-rspec'
 
