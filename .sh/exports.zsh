@@ -2,6 +2,9 @@
 # zshenv has already started PATH with rbenv so append only here
 #export PATH=$PATH~/bin:/usr/local/bin:/usr/local/sbin:~/bin
 
+# Change the timeout when change modes
+export KEYTIMEOUT=1
+
 # User configuration
 export PATH="/usr/local/bin:/usr/local/git/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/Cellar/mysql55/5.5.44/bin:$PATH"
 
