@@ -2,16 +2,16 @@
 ZSH=$HOME/.oh-my-zsh
 
 #Exports
-source ~/.sh/exports.zsh
+source ~/dotfiles/.sh/exports.zsh
 
 #completions
-source ~/.sh/completions.zsh
+source ~/dotfiles/.sh/completions.zsh
 
 #alias
-source ~/.sh/alias.zsh
+source ~/dotfiles/.sh/alias.zsh
 
 #functions
-source ~/.sh/functions.zsh
+source ~/dotfiles/.sh/functions.zsh
 
 
 # Set name of the theme to load.
