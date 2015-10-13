@@ -104,3 +104,10 @@ source ~/dotfiles/.vim/vim-plugins.vim
 set bg=dark
 colorscheme gruvbox
 
+" Include users local vimrc
+" This will override anything in this file
+" should it be set up above.
+if filereadable(expand("~/.vimrc.local"))
+    source ~/.vimrc.local
+endif
+

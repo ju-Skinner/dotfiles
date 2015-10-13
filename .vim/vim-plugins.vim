@@ -54,6 +54,12 @@ Plug 'kchmck/vim-coffee-script'
 " stages/reverts hunks.
 Plug 'airblade/vim-gitgutter'
 
+
+" Include user's local vim-plugin file
+if filereadable(expand("~/vim-plugins.local"))
+    source ~/vim-plugins.local
+endif
+
 call plug#end()
 
 " Plugin settings:
