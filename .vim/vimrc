@@ -57,6 +57,7 @@ set hlsearch				" hightlight matches
 set gdefault				" use the `g` flag by default
 set nu                      " show line number
 set ruler                   " show row and column number
+set laststatus=2            " always shows the status line
 
 " allow the cursor to go anywhere in visual block mode
 set virtualedit+=block

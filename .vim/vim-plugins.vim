@@ -66,6 +66,11 @@ call plug#end()
 " Below are some sane defaults for a couple of the above plugins
 
 " ===
+" Airline
+" ===
+let g:airline_powerline_fonts = 1
+
+" ===
 " NERDTree
 " ===
 nnoremap <leader>n :NERDTreeToggle<cr>
