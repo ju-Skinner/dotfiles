@@ -35,7 +35,7 @@ Plug 'tpope/vim-rails'
 Plug 'tpope/vim-surround'
 
 " Vim plugin for intensely orgasmic commenting
-"Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdcommenter'
 
 " dispatch.vim: asynchronous build and test dispatcher
 " http://www.vim.org/scripts/script.php?script_id=4504
@@ -65,23 +65,73 @@ call plug#end()
 " Plugin settings:
 " Below are some sane defaults for a couple of the above plugins
 
+" ===
+" NERDTree
+" ===
+nnoremap <leader>n :NERDTreeToggle<cr>
+nmap <Leader>ff :NERDTreeFind<CR>
+let g:NERDTreeDirArrows = 1
+let g:NERDTreeWinSize = 50
+
+" ===
+" NERDCommenter
+" ===
+let g:NERDCreateDefaultMappings = 0
+let g:NERDCustomDelimiters = {
+ \ 'ruby': { 'left': '# ' },
+ \ 'vim': { 'left': '" ' },
+ \ 'haskell': { 'left': '-- ', 'right': '' },
+ \ 'slim': { 'left': '/ ', 'right': '' },
+ \ 'scss': { 'left': '// ', 'right': '' },
+ \ 'javascript': { 'left': '// ', 'right': '' }
+ \ }
+
+xmap <Leader>c<Space> <plug>NERDCommenterToggle
+nmap <Leader>c<Space> <plug>NERDCommenterToggle
+
+" ===
+" CtrlP
+" 
 " Remap ctrlp to ctrl-t - map however you like, but this is common to Atom
 " sublime, and textmate for fuzzy search
+" ===
 let g:ctrlp_map = '<c-t>'
 map <leader>t <c-t>
 
 " let ctrlp have up to 30 results
 let g:ctrlp_max_height = 30
 
+" ===
+" AG 
+" ===
 " configure ag.vim to always search from your project root instead of
 " current working directory
 let g:ag_working_path_mode="r"
 
+nnoremap <leader>aa :Ag<space>
+
+" ===
 " RSpec
+" ===
+let g:dispatch_compilers = { 'bundle exec': '' }
+map <Leader>d :Dispatch<CR>
+
 let g:rspec_command = "Dispatch bundle exec rspec --format=progress {spec}"
 map <leader>rf :call RunCurrentSpecFile()<CR>
 map <leader>rs :call RunNearestSpec()<CR>
 map <leader>rl :call RunLastSpec()<CR>
 map <leader>ra :call RunAllSpecs()<CR>
 
+function! g:FocusAndDispatchTestLine()
+  execute "Focus bundle exec test-unit-runner %:" . line(".") . " -p"
+  execute "Dispatch"
+endfunction
+
+function! g:FocusAndDispatchTestFile()
+  execute "Focus bundle exec test-unit-runner % -p"
+  execute "Dispatch"
+endfunction
+
+map <Leader>us :call g:FocusAndDispatchTestLine()<CR>
+map <Leader>uf :call g:FocusAndDispatchTestFile()<CR>
 
