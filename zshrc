@@ -60,7 +60,7 @@ ZSH_THEME="jules"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git ruby atom bundler)
+plugins=(git ruby atom bundler tmuxinator)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -76,4 +76,3 @@ PATH=$PATH:$HOME/.rbenv/bin # Add RBENV to PATH for scripting
 
 # load tmux
 #tmux
-
