@@ -69,6 +69,7 @@ call plug#end()
 " Airline
 " ===
 let g:airline_powerline_fonts = 1
+let g:airline_theme='light'
 
 " ===
 " NERDTree
@@ -91,8 +92,8 @@ let g:NERDCustomDelimiters = {
  \ 'javascript': { 'left': '// ', 'right': '' }
  \ }
 
-xmap <Leader>c<Space> <plug>NERDCommenterToggle
-nmap <Leader>c<Space> <plug>NERDCommenterToggle
+xmap <Leader>/<Space> <plug>NERDCommenterToggle
+nmap <Leader>/<Space> <plug>NERDCommenterToggle
 
 " ===
 " CtrlP
