@@ -19,6 +19,7 @@ syntax on 				" Syntax highlighting
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
+set backspace=indent,eol,start
 set expandtab				        " Uses spaces instead of tabs
 set smarttab				        " let's tab key insert 'tab stops', and bksp deletes tabs
 set shiftround				      " tab / shifting moves to closest tabstop.
