@@ -1,0 +1,10 @@
+[alias]
+	b = branch
+	co = checkout
+	s = status
+  lg = log --graph
+[push]
+	default = simple
+[user]
+	email = ju.skinner@gmail.com
+	name = Julian Skinner
