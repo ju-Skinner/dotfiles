@@ -104,7 +104,7 @@ source ~/dotfiles/.vim/vim-plugins.vim
 
 " Finally the color scheme
 set bg=dark
-colorscheme gruvbox
+colorscheme molokai
 
 " Include users local vimrc
 " This will override anything in this file
