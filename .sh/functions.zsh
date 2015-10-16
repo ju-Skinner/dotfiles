@@ -23,3 +23,17 @@ fi
 dev() { cd ~/_dev/$1; }
 _dev() { _files -W ~/_dev -/; }
 
+kill_in_tmux() {
+  session_name=$1
+  pane_number = $2
+  count=`tmux list-windows | wc -l`
+
+  for (( i=1; i <= $count; ++i ))
+  do
+    tmux select-window -t $session_name:$i
+    tmux select-pane -t $session.$pane_number
+    tmux send-keys -t $session_name C-c
+  done
+
+  tmux kill-session -t $session_name
+}
