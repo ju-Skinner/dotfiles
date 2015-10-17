@@ -77,6 +77,7 @@ nnoremap <leader>n :NERDTreeToggle<cr>
 nmap <Leader>ff :NERDTreeFind<CR>
 let g:NERDTreeDirArrows = 1
 let g:NERDTreeWinSize = 50
+let NERDTreeShowHidden=1
 
 " ===
 " NERDCommenter
