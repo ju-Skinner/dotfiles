@@ -86,8 +86,6 @@ let g:NERDCreateDefaultMappings = 0
 let g:NERDCustomDelimiters = {
  \ 'ruby': { 'left': '# ' },
  \ 'vim': { 'left': '" ' },
- \ 'haskell': { 'left': '-- ', 'right': '' },
- \ 'slim': { 'left': '/ ', 'right': '' },
  \ 'scss': { 'left': '// ', 'right': '' },
  \ 'javascript': { 'left': '// ', 'right': '' }
  \ }
