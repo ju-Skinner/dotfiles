@@ -75,8 +75,8 @@ let mapleader = ","
 inoremap jj <esc>
 
 " create new vsplit, and switch to it
-noremap <leader>v <C-w>v
-noremap <leader>s <C-w>s
+noremap <leader>v <C-w>v<C-w>l
+noremap <leader>s <C-w>s<C-w>j
 
 " bindings for easy split nav
 nnoremap <C-h> <C-w>h
@@ -105,6 +105,15 @@ source ~/dotfiles/.vim/vim-plugins.vim
 " Finally the color scheme
 set bg=dark
 colorscheme molokai
+
+" This will autoreload the vimrc after saving
+" the file
+if has("autocmd")
+  augroup reload_vimrc " {
+    autocmd!
+    autocmd BufWritePost $MYVIMRC source $MYVIMRC
+  augroup END " }
+endif
 
 " Include users local vimrc
 " This will override anything in this file

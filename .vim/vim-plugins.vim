@@ -77,6 +77,7 @@ nnoremap <leader>n :NERDTreeToggle<cr>
 nmap <Leader>ff :NERDTreeFind<CR>
 let g:NERDTreeDirArrows = 1
 let g:NERDTreeWinSize = 50
+let NERDTreeShowHidden=1
 
 " ===
 " NERDCommenter
@@ -85,8 +86,6 @@ let g:NERDCreateDefaultMappings = 0
 let g:NERDCustomDelimiters = {
  \ 'ruby': { 'left': '# ' },
  \ 'vim': { 'left': '" ' },
- \ 'haskell': { 'left': '-- ', 'right': '' },
- \ 'slim': { 'left': '/ ', 'right': '' },
  \ 'scss': { 'left': '// ', 'right': '' },
  \ 'javascript': { 'left': '// ', 'right': '' }
  \ }
