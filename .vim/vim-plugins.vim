@@ -54,10 +54,6 @@ Plug 'kchmck/vim-coffee-script'
 " stages/reverts hunks.
 Plug 'airblade/vim-gitgutter'
 
-python from powerline.vim import setup as powerline_setup
-python powerline_setup()
-python del powerline_setup
-
 " Include user's local vim-plugin file
 if filereadable(expand("~/vim-plugins.local"))
     source ~/vim-plugins.local
