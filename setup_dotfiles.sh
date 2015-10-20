@@ -20,6 +20,9 @@ brew install python
 brew install mysql
 brew install reattach-to-user-namespace
 
+pip install powerline-status
+pip install psutil
+
 
 special_echo "Install Oh-My-Zsh"
 sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
