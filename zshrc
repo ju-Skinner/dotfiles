@@ -22,8 +22,7 @@ source /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.z
 # time that oh-my-zsh is loaded.
 #ZSH_THEME="robbyrussell"
 # ZSH_THEME="wuffers"
-#ZSH_THEME="jules"
-ZSH_THEME="nebirhos"
+ZSH_THEME="jules-nebirhos"
 
 # Example aliases
 # alias zshconfig="atom ~/.zshrc"
