@@ -41,4 +41,8 @@ git config --global core.excludesfile $DIR/gitignore
 
 echo "Setting $HOME/.vim to link to $DIR/_vim directory"
 ln -s $DIR/.vim $HOME/.vim
+
+echo "Linking Custom Oh My Zsh themes "
+rm -rf ~/.oh-my-zsh/custom/themes
+ln -s ~/dotfiles/.oh-my-zsh/custom/themes
 */
