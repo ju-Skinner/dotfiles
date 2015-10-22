@@ -108,6 +108,12 @@ vnoremap k gk
 noremap H ^
 noremap L $
 
+" Disable the arrow keys, force ourselves to use VIM navigation keys
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
+
 source ~/dotfiles/.vim/vim-plugins.vim
 
 " Finally the color scheme
