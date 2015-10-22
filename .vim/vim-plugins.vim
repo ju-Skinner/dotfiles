@@ -105,6 +105,15 @@ map <leader>t <c-t>
 let g:ctrlp_max_height = 30
 
 " ===
+" Fugitive
+" ==
+" Map commands to keyboard
+nnoremap <leader>gb :Gblame<CR>
+nnoremap <leader>gs :Gstatus<CR>
+nnoremap <leader>gd :Gdiff<CR>
+nnoremap <leader>gw :Gwrite<CR>
+
+" ===
 " AG 
 " ===
 " configure ag.vim to always search from your project root instead of

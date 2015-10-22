@@ -25,10 +25,12 @@ set smarttab				        " let's tab key insert 'tab stops', and bksp deletes tab
 set shiftround				      " tab / shifting moves to closest tabstop.
 set autoindent				      " Match indents on new lines.
 set smartindent				      " Intelligently dedent / indent new lines based on rules.
+set splitright              " put new windows on the right
+set splitbelow              " and below
+set clipboard=unnamed       " OS X clipboard integration
 
 set wildmenu                "make tab completion behave like bash
 set wildmode=list:longest,full
-
 set wildignore+=.hg,.git,.svn
 set wildignore+=*.jpg,*.bmp,*.gif,*.png,*.jpeg
 set wildignore+=*.sw?
@@ -99,6 +101,12 @@ nnoremap <leader><leader> <c-^>
 " wrapped portion. This fixes that
 noremap j gj
 noremap k gk
+vnoremap j gj
+vnoremap k gk
+
+" H to start of line, L to end of line
+noremap H ^
+noremap L $
 
 source ~/dotfiles/.vim/vim-plugins.vim
 
