@@ -27,6 +27,10 @@ pip install psutil
 special_echo "Install Oh-My-Zsh"
 sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 
+echo "Linking Custom Oh My Zsh themes "
+rm -rf $ZSH_CUSTOM/themes
+ln -s $DIR/.oh-my-zsh/custom/themes $ZSH_CUSTOM/themes
+
 special_echo "Setting up $HOME/.zshrc"
 echo "source $DIR/zshrc" >> $HOME/.zshrc
 
@@ -41,8 +45,4 @@ git config --global core.excludesfile $DIR/gitignore
 
 echo "Setting $HOME/.vim to link to $DIR/_vim directory"
 ln -s $DIR/.vim $HOME/.vim
-
-echo "Linking Custom Oh My Zsh themes "
-rm -rf ~/.oh-my-zsh/custom/themes
-ln -s ~/dotfiles/.oh-my-zsh/custom/themes
 */
