@@ -51,12 +51,18 @@ Plug 'kchmck/vim-coffee-script'
 " stages/reverts hunks.
 Plug 'airblade/vim-gitgutter'
 
+
 " Include user's local vim-plugin file
 if filereadable(expand("~/vim-plugins.local"))
     source ~/vim-plugins.local
 endif
 
 call plug#end()
+
+" If you installed powerline via the Pip utility then this line is sufficient
+" see https://powerline.readthedocs.org/en/latest/installation/osx.html for
+" details
+source /usr/local/lib/python2.7/site-packages/powerline/bindings/vim/plugin/powerline.vim 
 
 " Plugin settings:
 " Below are some sane defaults for a couple of the above plugins
