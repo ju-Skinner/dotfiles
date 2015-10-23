@@ -21,9 +21,6 @@ Plug 'scrooloose/nerdtree'
 " numbertoggle
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
 
-" status bar plugin
-Plug 'bling/vim-airline'
-
 " Vim plugin for the_silver_searcher, 'ag', a replacement for the Perl module /
 " CLI script 'ack'
 Plug 'rking/ag.vim'             " http://github.com/rking/ag.vim
