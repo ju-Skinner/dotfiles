@@ -106,6 +106,7 @@ map <leader>t <c-t>
 
 " let ctrlp have up to 30 results
 let g:ctrlp_max_height = 30
+let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 
 " ===
 " Fugitive
