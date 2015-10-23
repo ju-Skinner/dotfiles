@@ -62,6 +62,7 @@ set smartcase				        " If there are uppercase letters, become case-sensitive
 set incsearch				        " live incremental searching
 set showmatch				        " live match highlighting
 set showcmd                 " show incomplete command
+set noshowmode              " disables the command mode from displaying
 set hlsearch				        " hightlight matches
 set gdefault				        " use the `g` flag by default
 set nu                      " show line number
