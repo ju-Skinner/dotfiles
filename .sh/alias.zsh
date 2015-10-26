@@ -2,6 +2,7 @@
 alias zshconfig="vim ~/dotfiles/zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 alias tmuxconfig="vim ~/dotfiles/tmux.conf"
+alias vimrc="vim ~/dotfiles/.vim/vimrc"
 
 alias show_hidden="defaults write com.apple.finder AppleShowAllFiles YES && killall Finder"
 alias hide_hidden="defaults write com.apple.finder AppleShowAllFiles NO && killall Finder"
