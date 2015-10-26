@@ -103,6 +103,7 @@ nmap <Leader>/<Space> <plug>NERDCommenterToggle
 " ===
 let g:ctrlp_map = '<c-t>'
 map <leader>t <c-t>
+map <leader>bu :CtrlPBuffer<cr>
 
 " let ctrlp have up to 30 results
 let g:ctrlp_max_height = 30
