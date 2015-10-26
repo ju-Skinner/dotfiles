@@ -51,6 +51,8 @@ Plug 'kchmck/vim-coffee-script'
 " stages/reverts hunks.
 Plug 'airblade/vim-gitgutter'
 
+" Seamless navigation between tmux panes and vim splits 
+Plug 'christoomey/vim-tmux-navigator'
 
 " Include user's local vim-plugin file
 if filereadable(expand("~/vim-plugins.local"))
