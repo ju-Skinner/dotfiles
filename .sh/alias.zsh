@@ -1,6 +1,7 @@
 #oh my zsh
-alias zshconfig="atom ~/.zshrc"
-alias ohmyzsh="atom ~/.oh-my-zsh"
+alias zshconfig="vim ~/dotfiles/zshrc"
+alias ohmyzsh="vim ~/.oh-my-zsh"
+alias tmuxconfig="vim ~/dotfiles/tmux.conf"
 
 alias show_hidden="defaults write com.apple.finder AppleShowAllFiles YES && killall Finder"
 alias hide_hidden="defaults write com.apple.finder AppleShowAllFiles NO && killall Finder"
@@ -18,4 +19,3 @@ alias bs="brew services start $1"
 alias bss="brew services stop $1"
 alias bsr="brew services restart $1"
 
-#projects
