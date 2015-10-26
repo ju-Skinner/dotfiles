@@ -152,3 +152,8 @@ endfunction
 map <Leader>us :call g:FocusAndDispatchTestLine()<CR>
 map <Leader>uf :call g:FocusAndDispatchTestFile()<CR>
 
+" Include user's local vim-plugin-mappings file
+if filereadable(expand("~/vim-plugin-mappings.local"))
+    source ~/vim-plugin-mappings.local
+endif
+
