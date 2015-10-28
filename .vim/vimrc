@@ -103,8 +103,7 @@ vnoremap / /\v
 noremap <leader><space> :noh<cr>:call clearmatches()<cr>
 
 " Quick buffer switching - like cmd-tabbing
-nnoremap <leader><leader> <c-^>
-
+nnoremap <leader><leader> :bnext<cr>
 " Visual line nav, not real line nav
 " If you wrap lines, vim by default won't let you move down one line to the
 " wrapped portion. This fixes that
