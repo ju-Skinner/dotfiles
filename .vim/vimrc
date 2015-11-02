@@ -33,12 +33,12 @@ set showmatch               " Show matching brackets when text indicator is over
 
 set splitright              " put new windows on the right
 set splitbelow              " and below
-set clipboard=unnamed       " OS X clipboard integration
+" set clipboard=unnamed       " OS X clipboard integration
 
 set wildmenu                "make tab completion behave like bash
 set wildmode=list:longest,full
 set wildignore+=.hg,.git,.svn
-set wildignore+=*.jpg,*.bmp,*.gif,*.png,*.jpeg
+set wildignore+=*.jpg,*.bmp,*.gif,*.png,*.jpeg,*.log
 set wildignore+=*.sw?
 set wildignore+=*.DS_Store?
 set wildignore+=vendor/bundle
