@@ -34,15 +34,12 @@ Plug 'tpope/vim-surround'
 " Vim plugin for intensely orgasmic commenting
 Plug 'scrooloose/nerdcommenter'
 
-" dispatch.vim: asynchronous build and test dispatcher
-" http://www.vim.org/scripts/script.php?script_id=4504
-Plug 'tpope/vim-dispatch'
+" Vim plugin for running ruby test
+" https://github.com/skalnik/vim-vroom.git
+Plug 'https://github.com/skalnik/vim-vroom.git'
 
 " Git wrapper so awesome, it should be illegal
 Plug 'tpope/vim-fugitive'
-
-" Run Rspec specs from Vim https://robots.thoughtbot.com
-Plug 'thoughtbot/vim-rspec'
 
 " Coffeescript support
 Plug 'kchmck/vim-coffee-script'
@@ -128,31 +125,6 @@ nnoremap <leader>gw :Gwrite<CR>
 let g:ag_working_path_mode="r"
 
 nnoremap <leader>aa :Ag<space>
-
-" ===
-" RSpec
-" ===
-let g:dispatch_compilers = { 'bundle exec': '' }
-map <Leader>d :Dispatch<CR>
-
-let g:rspec_command = "Dispatch bundle exec rspec --format=progress {spec}"
-map <leader>rf :call RunCurrentSpecFile()<CR>
-map <leader>rs :call RunNearestSpec()<CR>
-map <leader>rl :call RunLastSpec()<CR>
-map <leader>ra :call RunAllSpecs()<CR>
-
-function! g:FocusAndDispatchTestLine()
-  execute "Focus bundle exec test-unit-runner %:" . line(".") . " -p"
-  execute "Dispatch"
-endfunction
-
-function! g:FocusAndDispatchTestFile()
-  execute "Focus bundle exec test-unit-runner % -p"
-  execute "Dispatch"
-endfunction
-
-map <Leader>us :call g:FocusAndDispatchTestLine()<CR>
-map <Leader>uf :call g:FocusAndDispatchTestFile()<CR>
 
 " Include user's local vim-plugin-mappings file
 if filereadable(expand("~/vim-plugin-mappings.local"))

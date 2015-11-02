@@ -76,7 +76,7 @@ set virtualedit+=block
 
 " leader is a key that allows you to have your own 'namespace" of keybindings.
 " You'll see it a lot below as <leader>
-let mapleader = ","
+let mapleader = "\<Space>"
 
 " So we don't have to press shift when we want to get into command mode.
 " nnoremap ; :
