@@ -1,6 +1,6 @@
 set nocompatible
 
-" Automatic formatting
+" Automatic formatting {{{
 autocmd BufWritePre *.rb :%s/\s\+$//e
 autocmd BufWritePre *.html :%s/\s\+$//e
 autocmd BufWritePre *.html :%s/\s\+$//e
@@ -15,7 +15,9 @@ au BufNewFile,BufRead *.json setf javascript
 au BufNewFile,BufRead *.coffee setf coffee
 
 syntax on 				" Syntax highlighting
+" }}}
 
+" Editor  settings {{{
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
@@ -23,31 +25,33 @@ set backspace=indent,eol,start
 set expandtab				        " Uses spaces instead of tabs
 set smarttab				        " let's tab key insert 'tab stops', and bksp deletes tabs
 set shiftround				      " tab / shifting moves to closest tabstop.
-
-set history=1000            " remember more commands and search history
-set undolevels=1000         " use many muchos levels of undo
-
 set autoindent				      " Match indents on new lines.
 set smartindent				      " Intelligently dedent / indent new lines based on rules.
 set showmatch               " Show matching brackets when text indicator is over them
-
+set showcmd                 " show incomplete command
+set noshowmode              " disables the command mode from displaying
+set scrolloff=5             " Start scrolling three lines before the horizontal window border 
+set nu                      " show line number
+set ruler                   " show row and column number
+set laststatus=2            " always shows the status line
+set virtualedit+=block      " allow the cursor to go anywhere in visual block mode
 set splitright              " put new windows on the right
 set splitbelow              " and below
-" set clipboard=unnamed       " OS X clipboard integration
+set history=1000            " remember more commands and search history
+set undolevels=1000         " use many muchos levels of undo
+" }}}
 
+" Wildmenu {{{
 set wildmenu                "make tab completion behave like bash
 set wildmode=list:longest,full
-set wildignore+=.hg,.git,.svn
-set wildignore+=*.jpg,*.bmp,*.gif,*.png,*.jpeg,*.log
+set wildignore+=.hg,.git,.svn                   " Version control
+set wildignore+=*.jpg,*.bmp,*.gif,*.png,*.jpeg  " Images
+set wildignore+=vendor,tmp,*.log                " Rails
 set wildignore+=*.sw?
 set wildignore+=*.DS_Store?
-set wildignore+=vendor/bundle
-set wildignore+=vendor/gems
+" }}}
 
-" Start scrolling three lines before the horizontal window border 
-set scrolloff=5
-
-" We have VCS -- we don't need this
+" We  have VCS -- we don't need this
 set nobackup				        " we have vcs
 set nowritebackup			      " we have vcs
 set noswapfile
@@ -62,25 +66,15 @@ set autowrite               " autmotically write the file when leaving a modifie
 set ignorecase				      " case insensitive search
 set smartcase				        " If there are uppercase letters, become case-sensitive
 set showmatch				        " live match highlighting
-set showcmd                 " show incomplete command
-set noshowmode              " disables the command mode from displaying
 set incsearch				        " live incremental searching
 set hlsearch				        " hightlight matches
 set gdefault				        " use the `g` flag by default
-set nu                      " show line number
-set ruler                   " show row and column number
-set laststatus=2            " always shows the status line
 
-" allow the cursor to go anywhere in visual block mode
-set virtualedit+=block
 
+" Vim Mappings {{{
 " leader is a key that allows you to have your own 'namespace" of keybindings.
 " You'll see it a lot below as <leader>
 let mapleader = "\<Space>"
-
-" So we don't have to press shift when we want to get into command mode.
-" nnoremap ; :
-" vnoremap ; :
 
 " So we don't have to reach for escape to leave insert move.
 inoremap jj <esc>
@@ -113,15 +107,24 @@ noremap k gk
 vnoremap j gj
 vnoremap k gk
 
-" H to start of line, L to end of line
-noremap H ^
-noremap L $
+noremap H ^             " H to start of line
+noremap L $             " L to the end of line
 
 " Disable the arrow keys, force ourselves to use VIM navigation keys
 noremap <Up> <NOP>
 noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
+
+nnoremap <leader>w :w<CR> " Quick way to save a file
+
+vmap <leader>y "+y        " Yank to system clipboard
+vmap <leader>d "+d        " Delete and save contents to system clipboard
+nmap <leader>p "+p        " Paste from system clipboard
+nmap <leader>P "+P        " Paste before using system clipboard
+vmap <leader>p "+p        " Paste from system clipboard in visual mode
+vmap <leader>P "+P        " Paste before using system clipboard in visual mode
+" }}}
 
 source ~/dotfiles/.vim/vim-plugins.vim
 
