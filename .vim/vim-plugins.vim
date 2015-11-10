@@ -126,4 +126,4 @@ if filereadable(expand("~/vim-plugin-mappings.local"))
     source ~/vim-plugin-mappings.local
 endif
 
-" vim:foldmethod=marker:foldelevel=0
+" vim:foldmethod=marker:foldlevel=0
