@@ -1,3 +1,4 @@
+" Vim-plug {{{
 " Install vim-plug if we don't arlready have it
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
@@ -16,7 +17,7 @@ Plug 'morhetz/gruvbox'
 Plug 'ctrlpvim/ctrlp.vim'
 
 " Nerdtree
-Plug 'scrooloose/nerdtree'
+" Plug 'scrooloose/nerdtree'
 
 " numbertoggle
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
@@ -57,6 +58,7 @@ if filereadable(expand("~/vim-plugins.local"))
 endif
 
 call plug#end()
+" }}}
 
 " If you installed powerline via the Pip utility then this line is sufficient
 " see https://powerline.readthedocs.org/en/latest/installation/osx.html for
@@ -66,23 +68,20 @@ source /usr/local/lib/python2.7/site-packages/powerline/bindings/vim/plugin/powe
 " Plugin settings:
 " Below are some sane defaults for a couple of the above plugins
 
-" ===
-" Airline
+" Airline {{{
 " ===
 let g:airline_powerline_fonts = 1
+" }}}
 
-" ===
-" NERDTree
-" ===
+" Nerdtree {{{
 nnoremap <leader>n :NERDTreeToggle<cr>
 nmap <Leader>ff :NERDTreeFind<CR>
 let g:NERDTreeDirArrows = 1
 let g:NERDTreeWinSize = 50
 let NERDTreeShowHidden=1
-
-" ===
-" NERDCommenter
-" ===
+" }}}
+"
+" NERDCommenter {{{
 let g:NERDCreateDefaultMappings = 0
 let g:NERDCustomDelimiters = {
  \ 'ruby': { 'left': '# ' },
@@ -90,16 +89,13 @@ let g:NERDCustomDelimiters = {
  \ 'scss': { 'left': '// ', 'right': '' },
  \ 'javascript': { 'left': '// ', 'right': '' }
  \ }
-
 xmap <Leader>/<Space> <plug>NERDCommenterToggle
 nmap <Leader>/<Space> <plug>NERDCommenterToggle
+" }}}
 
-" ===
-" CtrlP
-" 
+" Ctrl-P {{{
 " Remap ctrlp to ctrl-t - map however you like, but this is common to Atom
 " sublime, and textmate for fuzzy search
-" ===
 let g:ctrlp_map = '<c-t>'
 map <leader>t <c-t>
 map <leader>bu :CtrlPBuffer<cr>
@@ -107,27 +103,27 @@ map <leader>bu :CtrlPBuffer<cr>
 " let ctrlp have up to 30 results
 let g:ctrlp_max_height = 30
 let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+"}}}
 
-" ===
-" Fugitive
-" ==
+" Fugitive {{{
 " Map commands to keyboard
 nnoremap <leader>gb :Gblame<CR>
 nnoremap <leader>gs :Gstatus<CR>
 nnoremap <leader>gd :Gdiff<CR>
 nnoremap <leader>gw :Gwrite<CR>
+" }}}
 
-" ===
-" AG 
-" ===
+" AG {{{
 " configure ag.vim to always search from your project root instead of
 " current working directory
 let g:ag_working_path_mode="r"
 
-nnoremap <leader>aa :Ag<space>
+nnoremap <leader>a :Ag<space>
+" }}}
 
 " Include user's local vim-plugin-mappings file
 if filereadable(expand("~/vim-plugin-mappings.local"))
     source ~/vim-plugin-mappings.local
 endif
 
+" vim:foldmethod=marker:foldelevel=0

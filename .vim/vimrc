@@ -51,6 +51,7 @@ set wildignore+=*.sw?
 set wildignore+=*.DS_Store?
 " }}}
 
+" Misc {{{
 " We  have VCS -- we don't need this
 set nobackup				        " we have vcs
 set nowritebackup			      " we have vcs
@@ -69,7 +70,7 @@ set showmatch				        " live match highlighting
 set incsearch				        " live incremental searching
 set hlsearch				        " hightlight matches
 set gdefault				        " use the `g` flag by default
-
+" }}}
 
 " Vim Mappings {{{
 " leader is a key that allows you to have your own 'namespace" of keybindings.
@@ -94,7 +95,7 @@ nnoremap / /\v
 vnoremap / /\v
 
 " clear match highlighting
-noremap <leader><space> :noh<cr>:call clearmatches()<cr>
+noremap <leader>c :noh<cr>:call clearmatches()<cr>
 
 " Quick buffer switching - like cmd-tabbing
 nnoremap <leader><leader> :bnext<cr>
@@ -116,7 +117,9 @@ noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
 
-nnoremap <leader>w :w<CR> " Quick way to save a file
+nnoremap <leader>w :w<CR>   " Quick way to save a file
+nnoremap <leader>q :q<CR>   " Quick way to close the current file/window
+nnoremap <leader>qa :qa<CR> " Quick way to close all open windows
 
 vmap <leader>y "+y        " Yank to system clipboard
 vmap <leader>d "+d        " Delete and save contents to system clipboard
@@ -148,3 +151,4 @@ if filereadable(expand("~/.vimrc.local"))
     source ~/.vimrc.local
 endif
 
+" vim:foldmethod=marker:foldlevel=0
