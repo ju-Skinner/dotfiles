@@ -34,6 +34,9 @@ ln -s $DIR/.oh-my-zsh/custom/themes $ZSH_CUSTOM/themes
 echo "Link Powerline config files to homedirectory config folder"
 ln -s /usr/local/lib/python2.7/site-packages/powerline/config_files $HOME/.config/powerline
 
+echo "Linking agignore file"
+ln -s $DIR/agignore $HOME/.agignore
+
 special_echo "Setting up $HOME/.zshrc"
 echo "source $DIR/zshrc" >> $HOME/.zshrc
 
