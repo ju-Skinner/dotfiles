@@ -89,8 +89,8 @@ let g:NERDCustomDelimiters = {
  \ 'scss': { 'left': '// ', 'right': '' },
  \ 'javascript': { 'left': '// ', 'right': '' }
  \ }
-xmap <Leader>/<Space> <plug>NERDCommenterToggle
-nmap <Leader>/<Space> <plug>NERDCommenterToggle
+xmap <Leader>cc <plug>NERDCommenterToggle
+nmap <Leader>cc <plug>NERDCommenterToggle
 " }}}
 
 " Ctrl-P {{{
