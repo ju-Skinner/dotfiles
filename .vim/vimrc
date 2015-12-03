@@ -39,6 +39,8 @@ set splitright              " put new windows on the right
 set splitbelow              " and below
 set history=1000            " remember more commands and search history
 set undolevels=1000         " use many muchos levels of undo
+set timeoutlen=1000         " key mapping delay 
+set ttimeoutlen=0           " key code delay
 " }}}
 
 " Wildmenu {{{
@@ -76,6 +78,7 @@ set gdefault				        " use the `g` flag by default
 " leader is a key that allows you to have your own 'namespace" of keybindings.
 " You'll see it a lot below as <leader>
 let mapleader = "\<Space>"
+" let mapleader = ","
 
 " So we don't have to reach for escape to leave insert move.
 inoremap jj <esc>
@@ -95,7 +98,7 @@ nnoremap / /\v
 vnoremap / /\v
 
 " clear match highlighting
-noremap <leader>c :noh<cr>:call clearmatches()<cr>
+noremap <leader>cm :noh<cr>:call clearmatches()<cr>
 
 " Quick buffer switching - like cmd-tabbing
 nnoremap <leader><leader> :bnext<cr>
@@ -119,7 +122,6 @@ noremap <Right> <NOP>
 
 nnoremap <leader>w :w<CR>   " Quick way to save a file
 nnoremap <leader>q :q<CR>   " Quick way to close the current file/window
-nnoremap <leader>qa :qa<CR> " Quick way to close all open windows
 
 vmap <leader>y "+y        " Yank to system clipboard
 vmap <leader>d "+d        " Delete and save contents to system clipboard

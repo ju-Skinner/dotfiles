@@ -52,6 +52,9 @@ Plug 'airblade/vim-gitgutter'
 " Seamless navigation between tmux panes and vim splits 
 Plug 'christoomey/vim-tmux-navigator'
 
+" Adds closing block keywords
+Plug 'tpope/vim-endwise'
+
 " Include user's local vim-plugin file
 if filereadable(expand("~/vim-plugins.local"))
     source ~/vim-plugins.local
@@ -74,11 +77,11 @@ let g:airline_powerline_fonts = 1
 " }}}
 
 " Nerdtree {{{
-nnoremap <leader>n :NERDTreeToggle<cr>
-nmap <Leader>ff :NERDTreeFind<CR>
-let g:NERDTreeDirArrows = 1
-let g:NERDTreeWinSize = 50
-let NERDTreeShowHidden=1
+" nnoremap <leader>n :NERDTreeToggle<cr>
+" nmap <Leader>ff :NERDTreeFind<CR>
+" let g:NERDTreeDirArrows = 1
+" let g:NERDTreeWinSize = 50
+" let NERDTreeShowHidden=1
 " }}}
 "
 " NERDCommenter {{{

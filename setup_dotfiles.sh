@@ -9,6 +9,7 @@ special_echo "Install Homebrew"
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 brew install git
+brew install git-extras
 brew install wget
 brew tap homebrew/services
 brew install iterm2
