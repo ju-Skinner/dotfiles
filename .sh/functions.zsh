@@ -25,8 +25,19 @@ _dev() { _files -W ~/_dev -/; }
 
 kill_tmux() {
   pane_number=$1
-  tmux ls -F '#S' | while read session_name
-  do
+  if [ $2 ]; then 
+    echo '$2'
+    close_session $2
+  else
+    tmux ls -F '#S' | while read session_name
+    do
+      close_session $session_name 
+    done
+  fi
+}
+
+close_session() {
+    session_name=$1
     count=`tmux list-windows -t $session_name | wc -l`
 
     for (( i=1; i <= $count; ++i ))
@@ -38,7 +49,6 @@ kill_tmux() {
 
     sleep 5
     tmux kill-session -t $session_name
-  done
 }
 
 list_colors() {
