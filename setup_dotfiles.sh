@@ -20,6 +20,7 @@ brew install the_silver_searcher
 brew install python
 brew install mysql
 brew install reattach-to-user-namespace
+brew install hub
 
 pip install powerline-status
 pip install psutil
