@@ -55,6 +55,9 @@ Plug 'christoomey/vim-tmux-navigator'
 " Adds closing block keywords
 Plug 'tpope/vim-endwise'
 
+" Elixir Language 
+Plug 'elixir-lang/vim-elixir'
+
 " Include user's local vim-plugin file
 if filereadable(expand("~/vim-plugins.local"))
     source ~/vim-plugins.local
