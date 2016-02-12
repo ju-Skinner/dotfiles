@@ -10,17 +10,25 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 
 brew install git
 brew install git-extras
+brew install hub
 brew install wget
 brew tap homebrew/services
+
+# terminal 
 brew install iterm2
-brew install vim --override-system-vim
-brew install rbenv ruby-build rbenv-default-gems rbenv-use
 brew install tmux
+brew install vim --override-system-vim
+brew install reattach-to-user-namespace
 brew install the_silver_searcher
+
+# development
+brew install rbenv ruby-build rbenv-default-gems rbenv-use
 brew install python
 brew install mysql
-brew install reattach-to-user-namespace
-brew install hub
+
+# Elixir
+brew install elixir
+brew install erlang
 
 pip install powerline-status
 pip install psutil
