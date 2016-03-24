@@ -135,7 +135,7 @@ source ~/dotfiles/.vim/vim-plugins.vim
 
 " Finally the color scheme
 set bg=dark
-colorscheme molokai
+" colorscheme distill
 
 " This will autoreload the vimrc after saving
 " the file
