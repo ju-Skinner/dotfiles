@@ -8,11 +8,6 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
-" a ton of color schemes
-" https://github.com/flazz/vim-colorshcemes#current-colorschemes
-Plug 'flazz/vim-colorschemes'
-Plug 'morhetz/gruvbox'
-
 " Fuzzy finder -- must have
 Plug 'ctrlpvim/ctrlp.vim'
 
@@ -57,6 +52,16 @@ Plug 'tpope/vim-endwise'
 
 " Elixir Language 
 Plug 'elixir-lang/vim-elixir'
+
+" Colorschemes {{{
+
+" a ton of color schemes
+" https://github.com/flazz/vim-colorshcemes#current-colorschemes
+" Plug 'flazz/vim-colorschemes'
+" Plug 'morhetz/gruvbox'
+Plug 'https://github.com/duythinht/inori.git'
+
+" }}}
 
 " Include user's local vim-plugin file
 if filereadable(expand("~/vim-plugins.local"))
