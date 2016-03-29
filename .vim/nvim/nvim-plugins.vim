@@ -1,12 +1,17 @@
 " Vim-plug {{{
 " Install vim-plug if we don't arlready have it
-if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+if empty(glob('~/.config/nvim/autoload/plug.vim'))
+  silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   autocmd VimEnter * PlugInstall | source $MYVIMRC
 endif
 
 call plug#begin('~/.vim/plugged')
+
+" a ton of color schemes
+" https://github.com/flazz/vim-colorshcemes#current-colorschemes
+Plug 'flazz/vim-colorschemes'
+Plug 'morhetz/gruvbox'
 
 " Fuzzy finder -- must have
 Plug 'ctrlpvim/ctrlp.vim'
@@ -52,16 +57,6 @@ Plug 'tpope/vim-endwise'
 
 " Elixir Language 
 Plug 'elixir-lang/vim-elixir'
-
-" Colorschemes {{{
-
-" a ton of color schemes
-" https://github.com/flazz/vim-colorshcemes#current-colorschemes
-" Plug 'flazz/vim-colorschemes'
-" Plug 'morhetz/gruvbox'
-Plug 'https://github.com/duythinht/inori.git'
-
-" }}}
 
 " Include user's local vim-plugin file
 if filereadable(expand("~/vim-plugins.local"))
@@ -134,8 +129,8 @@ nnoremap <leader>a :Ag<space>
 " }}}
 
 " Include user's local vim-plugin-mappings file
-if filereadable(expand("~/vim-plugin-mappings.local"))
-    source ~/vim-plugin-mappings.local
+if filereadable(expand("~/nvim-plugin-mappings.local"))
+    source ~/nvim-plugin-mappings.local
 endif
 
 " vim:foldmethod=marker:foldlevel=0
