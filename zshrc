@@ -21,8 +21,8 @@ source /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.z
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 #ZSH_THEME="robbyrussell"
-# ZSH_THEME="wuffers"
-ZSH_THEME="jules-nebirhos"
+ZSH_THEME="j-sonicradish"
+# ZSH_THEME="jules-nebirhos"
 
 # Example aliases
 # alias zshconfig="atom ~/.zshrc"
@@ -62,7 +62,7 @@ DISABLE_AUTO_TITLE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git ruby atom bundler tmuxinator)
+plugins=(git ruby atom bundler emoji)
 
 source $ZSH/oh-my-zsh.sh
 
