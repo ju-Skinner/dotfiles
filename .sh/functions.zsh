@@ -24,20 +24,25 @@ dev() { cd ~/_dev/$1; }
 _dev() { _files -W ~/_dev -/; }
 
 kill_tmux() {
-  pane_number=$1
+  pane_number=3
+  if [ $1 ]; then
+    pane_number=$1
+  fi
+  
   if [ $2 ]; then 
     echo '$2'
     close_session $2
   else
     tmux ls -F '#S' | while read session_name
     do
-      close_session $session_name 
+      close_session $pane_number $session_name 
     done
   fi
 }
 
 close_session() {
-    session_name=$1
+    pane_number=$1
+    session_name=$2
     count=`tmux list-windows -t $session_name | wc -l`
 
     for (( i=1; i <= $count; ++i ))
