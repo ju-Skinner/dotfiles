@@ -30,7 +30,7 @@ set smartindent				      " Intelligently dedent / indent new lines based on rule
 set showmatch               " Show matching brackets when text indicator is over them
 set showcmd                 " show incomplete command
 set noshowmode              " disables the command mode from displaying
-set scrolloff=5             " Start scrolling three lines before the horizontal window border 
+set scrolloff=5             " Start scrolling three lines before the horizontal window border
 set nu                      " show line number
 set ruler                   " show row and column number
 set laststatus=2            " always shows the status line
@@ -39,7 +39,7 @@ set splitright              " put new windows on the right
 set splitbelow              " and below
 set history=1000            " remember more commands and search history
 set undolevels=1000         " use many muchos levels of undo
-set timeoutlen=1000         " key mapping delay 
+set timeoutlen=1000         " key mapping delay
 set ttimeoutlen=0           " key code delay
 " }}}
 
@@ -131,7 +131,7 @@ vmap <leader>p "+p        " Paste from system clipboard in visual mode
 vmap <leader>P "+P        " Paste before using system clipboard in visual mode
 " }}}
 
-source ~/dotfiles/.vim/vim-plugins.vim
+source ~/dotfiles/vim/vim-plugins.vim
 
 " Finally the color scheme
 set bg=dark

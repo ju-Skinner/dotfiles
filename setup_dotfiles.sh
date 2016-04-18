@@ -14,7 +14,7 @@ brew install hub
 brew install wget
 brew tap homebrew/services
 
-# terminal 
+# terminal
 brew install iterm2
 brew install tmux
 brew install vim --override-system-vim
@@ -47,6 +47,18 @@ ln -s /usr/local/lib/python2.7/site-packages/powerline/config_files $HOME/.confi
 echo "Linking agignore file"
 ln -s $DIR/agignore $HOME/.agignore
 
+echo "Linking irbrc file"
+ln -s $DIR/irbrc $HOME/.irbrc
+
+echo "Linking pryrc file"
+ln -s $DIR/pryrc $HOME/.pryrc
+
+echo "Linking pryrc file"
+ln -s $DIR/gemrc $HOME/.gemrc
+
+echo "Linking rbenv default-gems file file"
+ln -s $DIR/rbenv/default-gems $HOME/.rbenv/default-gems
+
 special_echo "Setting up $HOME/.zshrc"
 echo "source $DIR/zshrc" >> $HOME/.zshrc
 
@@ -60,5 +72,5 @@ echo "Configuring global gitignore file"
 git config --global core.excludesfile $DIR/gitignore
 
 echo "Setting $HOME/.vim to link to $DIR/_vim directory"
-ln -s $DIR/.vim $HOME/.vim
+ln -s $DIR/vim $HOME/.vim
 */
