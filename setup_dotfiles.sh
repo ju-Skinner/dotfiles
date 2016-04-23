@@ -39,7 +39,7 @@ sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install
 
 echo "Linking Custom Oh My Zsh themes "
 rm -rf $ZSH_CUSTOM/themes
-ln -s $DIR/.oh-my-zsh/custom/themes $ZSH_CUSTOM/themes
+ln -s $DIR/oh-my-zsh/custom/themes $ZSH_CUSTOM/themes
 
 echo "Link Powerline config files to homedirectory config folder"
 ln -s /usr/local/lib/python2.7/site-packages/powerline/config_files $HOME/.config/powerline
