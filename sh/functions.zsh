@@ -23,18 +23,57 @@ fi
 dev() { cd ~/_dev/$1; }
 _dev() { _files -W ~/_dev -/; }
 
+kill_tmux_usage() {
+  echo "Function kill_tmux"
+  echo ""
+  echo "Takes two keyword arguments: "
+  echo "\t--pane_number: The number of the pane to send Ctrl-C to"
+  echo "\t--session_name: The name of the TMUX session you want to kill"
+  echo ""
+  echo "i.e kill_tmux --pane_number=3 --session_name=my_session"
+  echo ""
+}
+
 kill_tmux() {
-  pane_number=3
-  if [ $1 ]; then
-    pane_number=$1
+  local pane_number session_name
+  while getopts ":p:s:h" arg; do 
+
+    case "$arg" in
+      h)
+          kill_tmux_usage
+          exit 1 
+          ;;
+      p)
+          pane_number=$OPTARG >&2
+          ;;
+      s)
+          session_name=$OPTARG >&2
+          ;;
+      \?)
+          echo "ERROR: unknown paramter \"$OPTARG\""
+          kill_tmux_usage
+          exit 1
+          ;;
+    esac
+  done
+
+  
+  if [ "${pane_number}" = "" ]; then
+    echo "changing to default pane_number 3"
+    pane_number=3
   fi
   
-  if [ $2 ]; then 
-    echo '$2'
-    close_session $2
+  #echo "PANE_NUMBER: ${pane_number}";
+  #echo "SESSION_NAME: ${session_name}";
+
+  if [ "${session_name}" != "" ]; then 
+    echo "closing SESSION: ${session_name} and sending Ctrl-C to PANE: ${pane_number}"
+    close_session $pane_number $session_name
   else
+    echo "closing all running sessions and sending Ctrl-C to PANE: ${pane_number}"
     tmux ls -F '#S' | while read session_name
     do
+      echo "current_session: $session_name"
       close_session $pane_number $session_name 
     done
   fi
