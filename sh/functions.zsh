@@ -88,7 +88,8 @@ close_session() {
     do
       tmux select-window -t $session_name:$i
       tmux select-pane -t $session.$pane_number
-      tmux send-keys -t $session_name C-c
+      tmux send-keys -t $session_name.$pane_number C-c
+      tmux send-keys -t $session.$pane_number spring stop ENTER
     done
 
     sleep 5
