@@ -59,8 +59,8 @@ kill_tmux() {
 
   
   if [ "${pane_number}" = "" ]; then
-    echo "changing to default pane_number 3"
-    pane_number=3
+    echo "going to send Control-C to all panes"
+    pane_number=0
   fi
   
   #echo "PANE_NUMBER: ${pane_number}";
@@ -80,20 +80,44 @@ kill_tmux() {
 }
 
 close_session() {
-    pane_number=$1
-    session_name=$2
-    count=`tmux list-windows -t $session_name | wc -l`
+  local pane session_name window_count 
 
-    for (( i=1; i <= $count; ++i ))
-    do
-      tmux select-window -t $session_name:$i
-      tmux select-pane -t $session.$pane_number
-      tmux send-keys -t $session_name.$pane_number C-c
-      tmux send-keys -t $session.$pane_number spring stop ENTER
-    done
+  pane=$1
+  session_name=$2
+  window_count=`tmux list-windows -t $session_name | wc -l`
 
-    sleep 5
-    tmux kill-session -t $session_name
+  echo "Pane: ${pane}, Session: ${session_name}"
+  
+  for (( i=1; i <= $window_count; ++i ))
+  do
+    tmux select-window -t $session_name:$i
+    window_name=`tmux display-message -p '#W'`
+
+    pane_count=`tmux list-panes -t $session_name:$i | wc -l`
+    echo "Session: ${session_name} | Window: ${window_name} | Pane Count: ${pane_count}"
+
+    if [ "${pane}" = "0" ]; then
+      for (( p=1; p <= $pane_count; p++ ))
+      do
+        close_pane $session_name $p
+      done
+    else
+      close_pane $session_name $pane
+    fi
+  done
+
+  sleep 5
+  tmux kill-session -t $session_name
+}
+
+close_pane() {
+  session_name=$1
+  pane_number=$2
+
+  echo "close_pane Session: ${session_name}, Pane: ${pane_number}"
+  tmux select-pane -t $session_name.$pane_number
+  tmux send-keys -t $session_name.$pane_number C-c
+  tmux send-keys -t $session_name.$pane_number spring stop ENTER
 }
 
 list_colors() {
