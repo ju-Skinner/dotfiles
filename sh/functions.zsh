@@ -35,12 +35,12 @@ kill_tmux_usage() {
 }
 
 kill_tmux() {
-  while getopts ":p:s:h" arg; do 
+  while getopts ":p:s:h" arg; do
 
     case "$arg" in
       h)
           kill_tmux_usage
-          exit 1 
+          exit 1
           ;;
       p)
           local pane_number=$OPTARG >&2
@@ -56,16 +56,16 @@ kill_tmux() {
     esac
   done
 
-  
+
   if [ "${pane_number}" = "" ]; then
     echo "going to send Control-C to all panes"
-    local pane_number=0
+    pane_number=0
   fi
-  
+
   #echo "PANE_NUMBER: ${pane_number}";
   #echo "SESSION_NAME: ${session_name}";
 
-  if [ "${session_name}" != "" ]; then 
+  if [ "${session_name}" != "" ]; then
     echo "closing SESSION: ${session_name} and sending Ctrl-C to PANE: ${pane_number}"
     close_session $pane_number $session_name
   else
@@ -74,7 +74,7 @@ kill_tmux() {
     do
       echo "PANE_NUBMER: ${pane_number}"
       echo "current_session: $session_name"
-      close_session $pane_number $session_name 
+      close_session $pane_number $session_name
     done
   fi
 }
@@ -87,7 +87,7 @@ close_session() {
   window_count=`tmux list-windows -t $session_name | wc -l`
 
   echo "Pane: ${pane}, Session: ${session_name}"
-  
+
   for (( i=1; i <= $window_count; ++i ))
   do
     tmux select-window -t $session_name:$i
