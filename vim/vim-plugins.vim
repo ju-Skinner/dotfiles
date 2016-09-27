@@ -11,9 +11,6 @@ call plug#begin('~/.vim/plugged')
 " Fuzzy finder -- must have
 Plug 'ctrlpvim/ctrlp.vim'
 
-" Nerdtree
-" Plug 'scrooloose/nerdtree'
-
 " numbertoggle
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
 
@@ -84,14 +81,6 @@ source /usr/local/lib/python2.7/site-packages/powerline/bindings/vim/plugin/powe
 let g:airline_powerline_fonts = 1
 " }}}
 
-" Nerdtree {{{
-" nnoremap <leader>n :NERDTreeToggle<cr>
-" nmap <Leader>ff :NERDTreeFind<CR>
-" let g:NERDTreeDirArrows = 1
-" let g:NERDTreeWinSize = 50
-" let NERDTreeShowHidden=1
-" }}}
-"
 " NERDCommenter {{{
 let g:NERDCreateDefaultMappings = 0
 let g:NERDCustomDelimiters = {
