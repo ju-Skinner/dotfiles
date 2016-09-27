@@ -3,3 +3,4 @@ bundler
 awesome_print
 tmuxinator
 rails
+rubocop
