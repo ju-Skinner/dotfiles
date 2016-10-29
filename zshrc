@@ -20,9 +20,8 @@ source /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.z
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-#ZSH_THEME="robbyrussell"
-ZSH_THEME="j-sonicradish"
-# ZSH_THEME="jules-nebirhos"
+#ZSH_THEME="j-sonicradish"
+ZSH_THEME="spaceship"
 
 # Example aliases
 # alias zshconfig="atom ~/.zshrc"
