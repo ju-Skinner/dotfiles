@@ -8,6 +8,7 @@ function special_echo {
 special_echo "Install Homebrew"
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
+# GIT
 brew install git
 brew install git-extras
 brew install hub
@@ -30,6 +31,7 @@ brew install mysql
 brew install elixir
 brew install erlang
 
+# VIM / TMUX Status bar
 pip install powerline-status
 pip install psutil
 
