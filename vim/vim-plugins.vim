@@ -50,6 +50,8 @@ Plug 'tpope/vim-endwise'
 " Elixir Language 
 Plug 'elixir-lang/vim-elixir'
 
+" Vim commit plugin
+Plug 'rhysd/committia.vim'
 " Colorschemes {{{
 
 " a ton of color schemes
