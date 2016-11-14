@@ -34,9 +34,6 @@ Plug 'https://github.com/skalnik/vim-vroom.git'
 " Git wrapper so awesome, it should be illegal
 Plug 'tpope/vim-fugitive'
 
-" Coffeescript support
-Plug 'kchmck/vim-coffee-script'
-
 " A Vim plugin which shows a git diff in the gutter (sign column) and
 " stages/reverts hunks.
 Plug 'airblade/vim-gitgutter'
@@ -47,11 +44,11 @@ Plug 'christoomey/vim-tmux-navigator'
 " Adds closing block keywords
 Plug 'tpope/vim-endwise'
 
-" Elixir Language 
-Plug 'elixir-lang/vim-elixir'
-
 " Vim commit plugin
 Plug 'rhysd/committia.vim'
+
+" A solid language pack for Vim
+Plug 'sheerun/vim-polyglot'
 " Colorschemes {{{
 
 " a ton of color schemes
