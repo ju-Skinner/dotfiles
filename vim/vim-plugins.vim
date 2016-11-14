@@ -49,6 +49,10 @@ Plug 'rhysd/committia.vim'
 
 " A solid language pack for Vim
 Plug 'sheerun/vim-polyglot'
+
+" Lean & mean status/tabline for vim that's light as ai
+Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 " Colorschemes {{{
 
 " a ton of color schemes
@@ -78,6 +82,7 @@ source /usr/local/lib/python2.7/site-packages/powerline/bindings/vim/plugin/powe
 " Airline {{{
 " ===
 let g:airline_powerline_fonts = 1
+let g:airlinetheme = "solarized"
 " }}}
 
 " NERDCommenter {{{
