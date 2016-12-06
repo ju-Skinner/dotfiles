@@ -5,9 +5,6 @@
 # Change the timeout when change modes
 export KEYTIMEOUT=1
 
-# User configuration
-export PATH="/usr/local/bin:/usr/local/git/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/Cellar/mysql55/5.5.44/bin:$PATH"
-
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # Compilation flags
@@ -27,4 +24,11 @@ SSH_ENV=$HOME/.ssh/environment
 
 eval "$(rbenv init -)"
 
+# GO lang
+export GOPATH=$HOME/_dev/go
+
 # ssh-add ~/.ssh/id_rsa
+
+# User configuration
+export PATH="/usr/local/bin:/usr/local/git/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/Cellar/mysql55/5.5.44/bin:$GOPATH/bin:$PATH"
+
