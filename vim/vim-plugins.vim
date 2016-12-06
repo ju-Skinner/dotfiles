@@ -38,7 +38,7 @@ Plug 'tpope/vim-fugitive'
 " stages/reverts hunks.
 Plug 'airblade/vim-gitgutter'
 
-" Seamless navigation between tmux panes and vim splits 
+" Seamless navigation between tmux panes and vim splits
 Plug 'christoomey/vim-tmux-navigator'
 
 " Adds closing block keywords
@@ -49,6 +49,11 @@ Plug 'rhysd/committia.vim'
 
 " A solid language pack for Vim
 Plug 'sheerun/vim-polyglot'
+
+" Lean & mean status/tabline for vim that's light as ai
+Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
 " Colorschemes {{{
 
 " a ton of color schemes
@@ -70,7 +75,7 @@ call plug#end()
 " If you installed powerline via the Pip utility then this line is sufficient
 " see https://powerline.readthedocs.org/en/latest/installation/osx.html for
 " details
-source /usr/local/lib/python2.7/site-packages/powerline/bindings/vim/plugin/powerline.vim 
+source /usr/local/lib/python2.7/site-packages/powerline/bindings/vim/plugin/powerline.vim
 
 " Plugin settings:
 " Below are some sane defaults for a couple of the above plugins
@@ -78,6 +83,7 @@ source /usr/local/lib/python2.7/site-packages/powerline/bindings/vim/plugin/powe
 " Airline {{{
 " ===
 let g:airline_powerline_fonts = 1
+let g:airlinetheme = "solarized"
 " }}}
 
 " NERDCommenter {{{
