@@ -73,7 +73,7 @@ source $ZSH/oh-my-zsh.sh
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
-PATH=$PATH:$HOME/.rbenv/bin # Add RBENV to PATH for scripting
+PATH=~/.rbenv/shims:$PATH # Add RBENV to PATH for scripting
 
 # load tmux
 #tmux
