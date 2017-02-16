@@ -61,7 +61,7 @@ DISABLE_AUTO_TITLE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git ruby atom bundler tmuxinator)
+plugins=(git ruby atom bundler tmuxinator nvm)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -72,8 +72,6 @@ source $ZSH/oh-my-zsh.sh
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
-
-PATH=~/.rbenv/shims:$PATH # Add RBENV to PATH for scripting
 
 # load tmux
 #tmux

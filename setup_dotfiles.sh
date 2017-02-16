@@ -8,6 +8,9 @@ function special_echo {
 special_echo "Install Homebrew"
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
+# BREW
+brew update
+
 # GIT
 brew install git
 brew install git-extras
@@ -27,14 +30,19 @@ brew install rbenv ruby-build rbenv-default-gems rbenv-use
 brew install python
 brew install mysql
 
+# NODE
+brew install node
+
 # Elixir
-brew install elixir
-brew install erlang
+# brew install elixir
+# brew install erlang
 
 # VIM / TMUX Status bar
 pip install powerline-status
 pip install psutil
 
+# WEECHAT
+# brew install weechat --with-aspell --with-curl --with-python --with-perl --with-ruby --with-lua --with-guile
 
 special_echo "Install Oh-My-Zsh"
 sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
@@ -64,6 +72,10 @@ ln -s $DIR/gemrc $HOME/.gemrc
 echo "Linking rbenv default-gems file file"
 ln -s $DIR/rbenv/default-gems $HOME/.rbenv/default-gems
 
+# echo "Linking weechat settings"
+# ln -sf $DIR/weechat/weechat.conf $HOME/.weechat/weechat.conf
+# ln -sf $DIR/weechat/buffers.conf $HOME/.weechat/buffers.conf
+
 special_echo "Setting up $HOME/.zshrc"
 echo "source $DIR/zshrc" >> $HOME/.zshrc
 
@@ -78,4 +90,8 @@ git config --global core.excludesfile $DIR/gitignore
 
 echo "Setting $HOME/.vim to link to $DIR/_vim directory"
 ln -s $DIR/vim $HOME/.vim
+
+echo "Installing NVM for Node"
+ruby -e "$(curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | zsh)"
+
 */
