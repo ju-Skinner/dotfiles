@@ -94,4 +94,6 @@ ln -s $DIR/vim $HOME/.vim
 echo "Installing NVM for Node"
 ruby -e "$(curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | zsh)"
 
+echo "Installing Node lastest"
+nvm install 7.5
 */
