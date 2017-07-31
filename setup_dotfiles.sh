@@ -34,8 +34,9 @@ brew install mysql
 brew install node
 
 # Elixir
-# brew install elixir
-# brew install erlang
+brew install elixir
+brew install erlang
+brew install fwup squashfs coreutils # Nerves Project
 
 # VIM / TMUX Status bar
 pip install powerline-status
@@ -80,7 +81,7 @@ special_echo "Setting up $HOME/.zshrc"
 echo "source $DIR/zshrc" >> $HOME/.zshrc
 
 special_echo "Settting up $HOME/.tmux.conf"
-echo "tmux source-file $DIR/tmux.conf" > $HOME/.tmux.conf
+echo "source $DIR/tmux.conf" > $HOME/.tmux.conf
 
 echo "Overwriting up $HOME/.gitconfig"
 echo -e "[include]\n  path = $DIR/_gitconfig" > $HOME/.gitconfig

@@ -25,8 +25,8 @@ SSH_ENV=$HOME/.ssh/environment
 eval "$(rbenv init -)"
 
 # GO lang
-export GOPATH=$HOME/_dev/go
-export GOROOT=/usr/local/Cellar/go/1.7.3/libexec
+# export GOPATH=$HOME/_dev/go
+# export GOROOT=/usr/local/Cellar/go/1.7.3/libexec
 
 # ssh-add ~/.ssh/id_rsa
 
@@ -38,3 +38,6 @@ export PATH=${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools
 
 export NVM_DIR="/Users/jules/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+# Elixir Shell History
+export ERL_AFLAGS="-kernel shell_history enabled"
