@@ -28,16 +28,16 @@ eval "$(rbenv init -)"
 # export GOPATH=$HOME/_dev/go
 # export GOROOT=/usr/local/Cellar/go/1.7.3/libexec
 
-# ssh-add ~/.ssh/id_rsa
-
 # User configuration
 export PATH="~/.rbenv/shims:/usr/local/bin:/usr/local/git/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/Cellar/mysql55/5.5.44/bin:$GOPATH/bin:$PATH"
 
 export ANDROID_HOME=${HOME}/Library/Android/sdk
 export PATH=${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools
 
-export NVM_DIR="/Users/jules/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+# Node Version Manager (NVM)
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Elixir Shell History
 export ERL_AFLAGS="-kernel shell_history enabled"
