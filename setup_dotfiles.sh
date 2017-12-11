@@ -1,4 +1,4 @@
-/*
+
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 # Generates colored output.
 function special_echo {
@@ -27,11 +27,11 @@ brew install the_silver_searcher
 
 # development
 brew install rbenv ruby-build rbenv-default-gems rbenv-use
-brew install python
-brew install mysql
+# brew install python
+# brew install mysql
 
 # NODE
-brew install node
+# brew install node
 
 # Elixir / Erlang Version Manager
 # git clone https://github.com/asdf-vm/asdf.git ~/.asdf

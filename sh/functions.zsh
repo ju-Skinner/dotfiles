@@ -118,7 +118,7 @@ close_pane() {
 
   echo "close_pane Session: ${session_name}, Pane: ${pane_number}"
   tmux select-pane -t $session_name.$pane_number
-  tmux send-keys -t $session_name.$pane_number C-c
+  tmux send-keys -t $session_name.$pane_number C-c C-c
   tmux send-keys -t $session_name.$pane_number spring stop ENTER
 }
 
