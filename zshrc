@@ -67,8 +67,6 @@ source $ZSH/oh-my-zsh.sh
 
 . $HOME/.asdf/asdf.sh
 
-. $HOME/.asdf/completions/asdf.bash
-
 ssh-add -K ~/.ssh/ju-skinner
 
 # User configuration
