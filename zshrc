@@ -61,14 +61,15 @@ DISABLE_AUTO_TITLE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git ruby atom bundler tmuxinator nvm)
+plugins=(git ruby atom bundler tmuxinator nvm zsh-nvm asdf)
 
 source $ZSH/oh-my-zsh.sh
 
-. $HOME/.asdf/asdf.sh
-
 ssh-add -K ~/.ssh/ju-skinner
 
+if [ -f $HOME/.asdf/completions/asdf.bash ]; then
+  . $HOME/.asdf/asdf.sh
+fi
 # User configuration
 
 # Compilation flags
@@ -79,3 +80,7 @@ ssh-add -K ~/.ssh/ju-skinner
 
 # load tmux
 #tmux
+
+eval "$(rbenv init -)"
+
+eval "$(hub alias -s)"
