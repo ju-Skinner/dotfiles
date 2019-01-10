@@ -18,9 +18,7 @@ export KEYTIMEOUT=1
  fi
 
  # ssh
-export SSH_KEY_PATH="~/.ssh/rsa_id"
-
-SSH_ENV=$HOME/.ssh/environment
+export SSH_ENV=$HOME/.ssh/environment
 
 # User configuration
 export PATH="~/.rbenv/shims:/usr/local/bin:/usr/local/git/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/Cellar/mysql55/5.5.44/bin:$HOME/.fastlane/bin"

@@ -4,9 +4,6 @@ ZSH=$HOME/.oh-my-zsh
 #Exports
 source ~/dotfiles/sh/exports.zsh
 
-#completions
-source ~/dotfiles/sh/completions.zsh
-
 #alias
 source ~/dotfiles/sh/alias.zsh
 
@@ -67,10 +64,10 @@ source $ZSH/oh-my-zsh.sh
 
 ssh-add -K ~/.ssh/ju-skinner
 
-if [ -f $HOME/.asdf/completions/asdf.bash ]; then
-  . $HOME/.asdf/asdf.sh
-fi
 # User configuration
+
+## completions
+source ~/dotfiles/sh/completions.zsh
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
