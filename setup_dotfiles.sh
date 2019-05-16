@@ -42,6 +42,9 @@ brew install fwup squashfs coreutils # Nerves Project
 pip install powerline-status
 pip install psutil
 
+# Z
+brew install z
+
 # WEECHAT
 # brew install weechat --with-aspell --with-curl --with-python --with-perl --with-ruby --with-lua --with-guile
 
@@ -97,4 +100,7 @@ ruby -e "$(curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/ins
 
 echo "Installing Node lastest"
 nvm install 7.5
+
+echo "Installing ZSH Syntax Highlighting"
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 */
