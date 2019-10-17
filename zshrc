@@ -4,9 +4,6 @@ ZSH=$HOME/.oh-my-zsh
 #Exports
 source ~/dotfiles/sh/exports.zsh
 
-#completions
-source ~/dotfiles/sh/completions.zsh
-
 #alias
 source ~/dotfiles/sh/alias.zsh
 
@@ -61,16 +58,16 @@ DISABLE_AUTO_TITLE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git ruby vscode bundler tmuxinator nvm asdf rbenv)
+plugins=(git ruby vscode bundler tmuxinator nvm asdf rbenv z zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
-. $HOME/.asdf/asdf.sh
+ssh-add -K ~/.ssh/ju-skinner
 
-if [ -f $HOME/.asdf/completions/asdf.bash ]; then
-  . $HOME/.asdf/completions/asdf.bash
-fi
 # User configuration
+
+## completions
+source ~/dotfiles/sh/completions.zsh
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
