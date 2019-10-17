@@ -23,7 +23,7 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 SSH_ENV=$HOME/.ssh/environment
 
 # User configuration
-export PATH="~/.rbenv/shims:/usr/local/bin:/usr/local/git/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/Cellar/mysql55/5.5.44/bin:$GOPATH/bin:$HOME/.fastlane/bin"
+export PATH="~/.rbenv/shims:/usr/local/bin:/usr/local/git/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/Cellar/mysql55/5.5.44/bin:$GOPATH/bin:$HOME/.fastlane/bin:$HOME/.flutterio/bin"
 
 export ANDROID_HOME=${HOME}/Library/Android/sdk
 export PATH=${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools
