@@ -51,10 +51,6 @@ brew install z
 special_echo "Install Oh-My-Zsh"
 sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 
-echo "Linking Custom Oh My Zsh themes "
-rm -rf $ZSH_CUSTOM/themes
-ln -s $DIR/oh-my-zsh/custom/themes $ZSH_CUSTOM/themes
-
 echo "Install Powerline fonts"
 ~/powerline_fonts/install.sh
 

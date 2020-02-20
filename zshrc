@@ -20,6 +20,9 @@ source /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.z
 #ZSH_THEME="j-sonicradish"
 ZSH_THEME="spaceship"
 
+# Change the Custom Folder to this repo
+ZSH_CUSTOM=$HOME/dotfiles/oh-my-zsh/custom
+
 # Example aliases
 # alias zshconfig="atom ~/.zshrc"
 # alias ohmyzsh="atom ~/.oh-my-zsh"
@@ -58,7 +61,7 @@ DISABLE_AUTO_TITLE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git ruby vscode bundler tmuxinator nvm asdf rbenv z zsh-syntax-highlighting)
+plugins=(git ruby vscode bundler tmuxinator nvm asdf rbenv)
 
 source $ZSH/oh-my-zsh.sh
 

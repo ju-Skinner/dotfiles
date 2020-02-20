@@ -264,13 +264,14 @@ spaceship_build_prompt() {
 # Disable python virtualenv environment prompt prefix
 VIRTUAL_ENV_DISABLE_PROMPT=true
 
+CURRENT_TIME_="%{$fg[white]%}%D %T%{$fg[white]%}%{$reset_color%}"
 # Compose PROMPT
 PROMPT=''
 [[ $SPACESHIP_PROMPT_ADD_NEWLINE == true ]] && PROMPT="$PROMPT$NEWLINE"
 PROMPT="$PROMPT"'$(spaceship_build_prompt) '
 [[ $SPACESHIP_PROMPT_SEPARATE_LINE == true ]] && PROMPT="$PROMPT$NEWLINE"
 [[ $SPACESHIP_VI_MODE_SHOW == true ]] && PROMPT="$PROMPT"'$(spaceship_vi_mode)'
-PROMPT="$PROMPT"'$(spaceship_return_status) '
+PROMPT="$PROMPT"'$CURRENT_TIME_ $(spaceship_return_status) '
 
 # Set PS2 - continuation interactive prompt
 PS2="%{$fg_bold[yellow]%}"
