@@ -275,6 +275,7 @@ PROMPT="$PROMPT"'$CURRENT_TIME_ $(spaceship_return_status) '
 
 # Set PS2 - continuation interactive prompt
 PS2="%{$fg_bold[yellow]%}"
+PS2+="%{$CURRENT_TIME_%}"
 PS2+="%{$SPACESHIP_PROMPT_SYMBOL%} "
 PS2+="%{$reset_color%}"
 
