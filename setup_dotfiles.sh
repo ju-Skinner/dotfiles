@@ -33,20 +33,26 @@ brew install mysql
 # NODE
 brew install node
 
-# Elixir
-brew install elixir
-brew install erlang
-brew install fwup squashfs coreutils # Nerves Project
+# Elixir / Erlang Version Manager
+# git clone https://github.com/asdf-vm/asdf.git ~/.asdf
 
 # VIM / TMUX Status bar
 pip install powerline-status
 pip install psutil
+
+# TMUX Plugin Manager
+# https://github.com/tmux-plugins/tpm#installation
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 # Z
 brew install z
 
 # WEECHAT
 # brew install weechat --with-aspell --with-curl --with-python --with-perl --with-ruby --with-lua --with-guile
+
+# echo "Linking weechat settings"
+# ln -sf $DIR/weechat/weechat.conf $HOME/.weechat/weechat.conf
+# ln -sf $DIR/weechat/buffers.conf $HOME/.weechat/buffers.conf
 
 special_echo "Install Oh-My-Zsh"
 sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
@@ -72,10 +78,6 @@ ln -s $DIR/gemrc $HOME/.gemrc
 echo "Linking rbenv default-gems file file"
 ln -s $DIR/rbenv/default-gems $HOME/.rbenv/default-gems
 
-# echo "Linking weechat settings"
-# ln -sf $DIR/weechat/weechat.conf $HOME/.weechat/weechat.conf
-# ln -sf $DIR/weechat/buffers.conf $HOME/.weechat/buffers.conf
-
 special_echo "Setting up $HOME/.zshrc"
 echo "source $DIR/zshrc" >> $HOME/.zshrc
 
@@ -83,7 +85,7 @@ special_echo "Settting up $HOME/.tmux.conf"
 echo "source $DIR/tmux.conf" > $HOME/.tmux.conf
 
 echo "Overwriting up $HOME/.gitconfig"
-echo -e "[include]\n  path = $DIR/_gitconfig" > $HOME/.gitconfig
+echo -e "[include]\n  path = $DIR/gitconfig" > $HOME/.gitconfig
 
 echo "Configuring global gitignore file"
 git config --global core.excludesfile $DIR/gitignore
@@ -91,11 +93,11 @@ git config --global core.excludesfile $DIR/gitignore
 echo "Setting $HOME/.vim to link to $DIR/_vim directory"
 ln -s $DIR/vim $HOME/.vim
 
-echo "Installing NVM for Node"
-ruby -e "$(curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | zsh)"
+# echo "Installing NVM for Node"
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | zsh
 
-echo "Installing Node lastest"
-nvm install 7.5
+echo "Installing Node latest"
+nvm install --latest-npm
 
 echo "Installing ZSH Syntax Highlighting"
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
