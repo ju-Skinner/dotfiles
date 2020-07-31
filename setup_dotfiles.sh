@@ -33,9 +33,6 @@ brew install mysql
 # NODE
 brew install node
 
-# Elixir / Erlang Version Manager
-# git clone https://github.com/asdf-vm/asdf.git ~/.asdf
-
 # VIM / TMUX Status bar
 pip install powerline-status
 pip install psutil
