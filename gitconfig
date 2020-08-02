@@ -8,3 +8,8 @@
 [user]
 	email = ju.skinner@gmail.com
 	name = Julian Skinner
+[pager]
+  branch = false
+[hub]
+  host = github.com
+  protocol = ssh
