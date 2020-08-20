@@ -65,12 +65,12 @@ plugins=(git ruby vscode bundler tmuxinator nvm rbenv)
 
 source $ZSH/oh-my-zsh.sh
 
-ssh-add -K ~/.ssh/ju-skinner
+ssh-add -K $HOME/.ssh/ju-skinner
 
 # User configuration
 
 ## completions
-source ~/dotfiles/sh/completions.zsh
+source $HOME/dotfiles/sh/completions.zsh
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
