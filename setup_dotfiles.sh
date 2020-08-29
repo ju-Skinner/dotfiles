@@ -27,7 +27,7 @@ brew install the_silver_searcher
 
 # development
 brew install rbenv ruby-build rbenv-default-gems rbenv-use
-brew install python
+brew install python3
 brew install mysql
 
 # NODE
@@ -54,11 +54,19 @@ brew install z
 special_echo "Install Oh-My-Zsh"
 sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 
+echo "Unpacking powerline_fonts"
+unzip powerline_fonts.zip
+
 echo "Install Powerline fonts"
-~/powerline_fonts/install.sh
+./powerline_fonts/install.sh
+
+echo "Removing powerline_fonts directory"
+rm -rf powerline_fonts
+
+mkdir $HOME/.config
 
 echo "Link Powerline config files to homedirectory config folder"
-ln -s /usr/local/lib/python2.7/site-packages/powerline/config_files $HOME/.config/powerline
+ln -s /usr/local/lib/python3.8/site-packages/powerline/config_files $HOME/.config/powerline
 
 echo "Linking agignore file"
 ln -s $DIR/agignore $HOME/.agignore
@@ -71,6 +79,8 @@ ln -s $DIR/pryrc $HOME/.pryrc
 
 echo "Linking pryrc file"
 ln -s $DIR/gemrc $HOME/.gemrc
+
+mkdir $HOME/.rbenv
 
 echo "Linking rbenv default-gems file file"
 ln -s $DIR/rbenv/default-gems $HOME/.rbenv/default-gems

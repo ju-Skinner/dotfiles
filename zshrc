@@ -11,7 +11,7 @@ source ~/dotfiles/sh/alias.zsh
 source ~/dotfiles/sh/functions.zsh
 
 # Source powerline-status zsh file
-source /usr/local/lib/python3.7/site-packages/powerline/bindings/zsh/powerline.zsh
+source /usr/local/lib/python3.8/site-packages/powerline/bindings/zsh/powerline.zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
