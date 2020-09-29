@@ -21,6 +21,7 @@ brew tap homebrew/services
 # terminal
 brew install iterm2
 brew install tmux
+brew install tmuxinator
 brew install vim --override-system-vim
 brew install reattach-to-user-namespace
 brew install the_silver_searcher
@@ -88,7 +89,7 @@ git config --global core.excludesfile $DIR/gitignore
 echo "Setting $HOME/.vim to link to $DIR/_vim directory"
 ln -s $DIR/vim $HOME/.vim
 
-# echo "Installing NVM for Node"
+echo "Installing NVM for Node"
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | zsh
 
 echo "Installing Node latest"
@@ -115,4 +116,6 @@ echo "source $DIR/tmux.conf" > $HOME/.tmux.conf
 special_echo "Overwriting up $HOME/.gitconfig"
 $echo -e "[include]\n  path = $DIR/gitconfig" > $HOME/.gitconfig
 
+echo "Installing ZSH AutoSuggestions"
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 */

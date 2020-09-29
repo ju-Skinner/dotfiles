@@ -1,6 +1,6 @@
 .DS_Store
 plugged/
 .byebug_history
-*.netrwhist
+**/**/.netrwhist
 node_modules
 yarn.lock

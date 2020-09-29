@@ -19,6 +19,7 @@ source /usr/local/lib/python3.8/site-packages/powerline/bindings/zsh/powerline.z
 # time that oh-my-zsh is loaded.
 #ZSH_THEME="j-sonicradish"
 ZSH_THEME="spaceship"
+SPACESHIP_TIME_SHOW=true
 
 # Change the Custom Folder to this repo
 ZSH_CUSTOM=$HOME/dotfiles/oh-my-zsh/custom
@@ -61,7 +62,7 @@ DISABLE_AUTO_TITLE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git ruby vscode bundler tmuxinator nvm rbenv zsh-syntax-highlighting)
+plugins=(git ruby vscode bundler tmuxinator nvm rbenv zsh-syntax-highlighting zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -71,7 +72,6 @@ ssh-add -K $HOME/.ssh/ju-skinner
 
 ## completions
 source $HOME/dotfiles/sh/completions.zsh
-SPACESHIP_TIME_SHOW=true
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
