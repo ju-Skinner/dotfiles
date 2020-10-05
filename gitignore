@@ -2,3 +2,5 @@
 plugged/
 .byebug_history
 *.netrwhist
+node_modules
+yarn.lock
