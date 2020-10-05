@@ -61,7 +61,7 @@ DISABLE_AUTO_TITLE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git ruby vscode bundler tmuxinator nvm rbenv)
+plugins=(git ruby vscode bundler tmuxinator nvm rbenv zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -71,6 +71,7 @@ ssh-add -K $HOME/.ssh/ju-skinner
 
 ## completions
 source $HOME/dotfiles/sh/completions.zsh
+SPACESHIP_TIME_SHOW=true
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
