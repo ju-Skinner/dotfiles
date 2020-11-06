@@ -25,6 +25,7 @@ brew install tmuxinator
 brew install vim --override-system-vim
 brew install reattach-to-user-namespace
 brew install the_silver_searcher
+brew install fzf  #https://github.com/junegunn/fzf
 
 # development
 brew install rbenv ruby-build rbenv-default-gems rbenv-use
@@ -118,4 +119,7 @@ $echo -e "[include]\n  path = $DIR/gitconfig" > $HOME/.gitconfig
 
 echo "Installing ZSH AutoSuggestions"
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
+echo "Setting up FZF"
+$(brew --prefix)/opt/fzf/install
 */
