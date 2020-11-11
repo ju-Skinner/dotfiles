@@ -151,3 +151,5 @@ if filereadable(expand("~/.vimrc.local"))
 endif
 
 " vim:foldmethod=marker:foldlevel=0
+
+set rtp+=/usr/local/opt/fzf

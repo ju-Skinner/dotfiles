@@ -1,0 +1,3 @@
+[submodule "/Users/wildboy/dotfiles/oh-my-zsh/custom/themes/spaceship-prompt"]
+	path = /Users/wildboy/dotfiles/oh-my-zsh/custom/themes/spaceship-prompt
+	url = https://github.com/denysdovhan/spaceship-prompt.git
