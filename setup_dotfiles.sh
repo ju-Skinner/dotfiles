@@ -87,9 +87,6 @@ mkdir $HOME/.rbenv
 echo "Creating Git Template Folder"
 mkdir $HOME/.git-template
 
-special_echo "Settting up $HOME/.git-template"
-echo "ref: refs/head/main" > $HOME/.git-template/HEAD
-
 echo "Configuring global gitignore file"
 git config --global core.excludesfile $DIR/gitignore
 
