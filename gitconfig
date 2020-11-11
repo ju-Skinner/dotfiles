@@ -13,3 +13,5 @@
 [hub]
   host = github.com
   protocol = ssh
+[init]
+  defaultBranch = main
