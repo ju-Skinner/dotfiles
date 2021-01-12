@@ -28,3 +28,6 @@ export PATH=${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools
 
 # Elixir Shell History
 export ERL_AFLAGS="-kernel shell_history enabled"
+
+# Prevent HomeBrew from auto-updating
+export HOMEBREW_NO_AUTO_UPDATE=1
