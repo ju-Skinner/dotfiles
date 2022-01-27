@@ -31,3 +31,6 @@ export ERL_AFLAGS="-kernel shell_history enabled"
 
 # Prevent HomeBrew from auto-updating
 export HOMEBREW_NO_AUTO_UPDATE=1
+
+# NVM plugin config
+export NVM_AUTO_USE=true # Will run nvm use if .nvmrc found in directory
