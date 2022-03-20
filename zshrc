@@ -66,7 +66,8 @@ plugins=(git ruby vscode bundler nvm rbenv zsh-syntax-highlighting zsh-autosugge
 
 source $ZSH/oh-my-zsh.sh
 
-ssh-add -K $HOME/.ssh/ju-skinner
+# ssh-add -K $HOME/.ssh/ju-skinner
+ssh-add --apple-use-keychain $HOME/.ssh/ju-skinner
 
 # User configuration
 
