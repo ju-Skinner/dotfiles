@@ -1,3 +1,5 @@
+zmodload zsh/zprof
+
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
@@ -62,7 +64,9 @@ DISABLE_AUTO_TITLE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git ruby vscode bundler nvm rbenv zsh-syntax-highlighting zsh-autosuggestions zsh-nvm)
+plugins=(evalcache git ruby vscode zsh-syntax-highlighting zsh-autosuggestions zsh-nvm)
+
+export PATH="$HOME/.rbenv/bin:$PATH"
 
 source $ZSH/oh-my-zsh.sh
 
@@ -83,11 +87,12 @@ source $HOME/dotfiles/sh/completions.zsh
 # load tmux
 #tmux
 
-eval "$(hub alias -s)"
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
+eval "$(rbenv init - zsh)"
+_evalcache hub alias -s
 
 [ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
+
+timezsh() {
+  shell=${1-$SHELL}
+  for i in $(seq 1 10); do /usr/bin/time $shell -i -c exit; done
+}
