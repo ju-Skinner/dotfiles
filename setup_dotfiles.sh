@@ -79,7 +79,7 @@ ln -s $DIR/irbrc $HOME/.irbrc
 echo "Linking pryrc file"
 ln -s $DIR/pryrc $HOME/.pryrc
 
-echo "Linking pryrc file"
+echo "Linking gemrc file"
 ln -s $DIR/gemrc $HOME/.gemrc
 
 mkdir $HOME/.rbenv

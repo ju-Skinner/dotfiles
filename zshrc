@@ -18,7 +18,7 @@ source /usr/local/lib/python3.8/site-packages/powerline/bindings/zsh/powerline.z
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 #ZSH_THEME="j-sonicradish"
-ZSH_THEME="dracula"
+ZSH_THEME="spaceship"
 SPACESHIP_TIME_SHOW=true
 
 # Change the Custom Folder to this repo
@@ -62,7 +62,7 @@ DISABLE_AUTO_TITLE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git ruby vscode bundler tmuxinator nvm rbenv zsh-syntax-highlighting zsh-autosuggestions zsh-nvm)
+plugins=(evalcache git ruby vscode bundler tmuxinator zsh-syntax-highlighting zsh-autosuggestions zsh-nvm kubectl)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -82,13 +82,8 @@ source $HOME/dotfiles/sh/completions.zsh
 # load tmux
 #tmux
 
-eval "$(rbenv init -)"
+_evalcache rbenv init -
 
-eval "$(hub alias -s)"
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
+_evalcache hub alias -s
 
 [ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
