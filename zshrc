@@ -66,7 +66,7 @@ plugins=(evalcache git ruby vscode bundler tmuxinator zsh-syntax-highlighting zs
 
 source $ZSH/oh-my-zsh.sh
 
-ssh-add -K $HOME/.ssh/ju-skinner
+ssh-add --apple-use-keychain $HOME/.ssh/ju-skinner
 
 # User configuration
 
