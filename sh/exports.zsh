@@ -21,16 +21,12 @@ export KEYTIMEOUT=1
 export SSH_ENV=$HOME/.ssh/environment
 
 # User configuration
-export PATH="~/.rbenv/shims:/usr/local/bin:/usr/local/git/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/Cellar/mysql55/5.5.44/bin:$GOPATH/bin:$HOME/.fastlane/bin:$HOME/.flutterio/bin"
-
-export ANDROID_HOME=${HOME}/Library/Android/sdk
-export PATH=${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools
-
-# Elixir Shell History
-export ERL_AFLAGS="-kernel shell_history enabled"
+export PATH="/usr/local/bin:/usr/local/git/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/Cellar/mysql55/5.5.44/bin:$GOPATH/bin:$HOME/.fastlane/bin:$HOME/.flutterio/bin:$PATH"
 
 # Prevent HomeBrew from auto-updating
 export HOMEBREW_NO_AUTO_UPDATE=1
 
 # NVM plugin config
+export NVM_LAZY_LOAD=true
+export NVM_COMPLETION=true
 export NVM_AUTO_USE=true # Will run nvm use if .nvmrc found in directory
