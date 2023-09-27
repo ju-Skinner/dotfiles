@@ -21,7 +21,8 @@ export KEYTIMEOUT=1
 export SSH_ENV=$HOME/.ssh/environment
 
 # User configuration
-export PATH="/usr/local/bin:/usr/local/git/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/Cellar/mysql55/5.5.44/bin:$GOPATH/bin:$HOME/.fastlane/bin:$HOME/.flutterio/bin:$PATH"
+export ADDON_PATH="/opt/homebrew/bin:/opt/homebrew/opt/postgresql@12/bin:$GOPATH/bin:$HOME/.fastlane/bin:$HOME/.flutterio/bin"
+export PATH="$ADDON_PATH:$PATH"
 
 # Prevent HomeBrew from auto-updating
 export HOMEBREW_NO_AUTO_UPDATE=1
@@ -30,3 +31,10 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 export NVM_LAZY_LOAD=true
 export NVM_COMPLETION=true
 export NVM_AUTO_USE=true # Will run nvm use if .nvmrc found in directory
+
+# Pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+
+# Node (Kajabi)
+export NODE_OPTIONS="--max-old-space-size=8192"

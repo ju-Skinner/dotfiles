@@ -10,9 +10,6 @@ source ~/dotfiles/sh/alias.zsh
 #functions
 source ~/dotfiles/sh/functions.zsh
 
-# Source powerline-status zsh file
-source /usr/local/lib/python3.8/site-packages/powerline/bindings/zsh/powerline.zsh
-
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -62,7 +59,7 @@ DISABLE_AUTO_TITLE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(evalcache git ruby vscode bundler tmuxinator zsh-syntax-highlighting zsh-autosuggestions zsh-nvm kubectl)
+plugins=(evalcache git ruby vscode bundler tmuxinator zsh-syntax-highlighting zsh-autosuggestions zsh-nvm kubectl gitfast)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -71,7 +68,7 @@ ssh-add --apple-use-keychain $HOME/.ssh/ju-skinner
 # User configuration
 
 ## completions
-source $HOME/dotfiles/sh/completions.zsh
+# source $HOME/dotfiles/sh/completions.zsh
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -86,4 +83,9 @@ _evalcache rbenv init -
 
 _evalcache hub alias -s
 
+eval "$(pyenv init -)"
+
 [ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
+
+fpath=(/opt/homebrew/share/zsh/site-functions $fpath)
+autoload -Uz compinit && compinit
