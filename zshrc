@@ -64,7 +64,7 @@ DISABLE_AUTO_TITLE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(evalcache git ruby vscode zsh-syntax-highlighting zsh-autosuggestions zsh-nvm)
+plugins=(evalcache git ruby vscode zsh-syntax-highlighting zsh-autosuggestions zsh-nvm gitfast)
 
 export PATH="$HOME/.rbenv/bin:$PATH"
 
