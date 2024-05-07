@@ -59,7 +59,7 @@ DISABLE_AUTO_TITLE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(evalcache git ruby vscode bundler tmuxinator zsh-syntax-highlighting zsh-autosuggestions zsh-nvm kubectl gitfast)
+plugins=(evalcache git ruby vscode bundler tmuxinator zsh-syntax-highlighting zsh-autosuggestions kubectl gitfast asdf)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -78,8 +78,6 @@ ssh-add --apple-use-keychain $HOME/.ssh/ju-skinner
 
 # load tmux
 #tmux
-
-_evalcache rbenv init -
 
 _evalcache hub alias -s
 

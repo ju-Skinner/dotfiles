@@ -28,9 +28,10 @@ brew install the_silver_searcher
 brew install fzf  #https://github.com/junegunn/fzf
 
 # development
-brew install rbenv ruby-build rbenv-default-gems rbenv-use
+brew install ruby-build
 brew install python3
 brew install mysql
+brew install coreutils curl asdf
 
 # NODE
 brew install node
@@ -68,7 +69,7 @@ rm -rf powerline_fonts
 mkdir $HOME/.config
 
 echo "Link Powerline config files to homedirectory config folder"
-ln -s /usr/local/lib/python3.8/site-packages/powerline/config_files $HOME/.config/powerline
+ln -s $HOME/.pyenv/versions/3.11.5/lib/python3.11/site-packages/powerline/config_files $HOME/.config/powerline
 
 echo "Linking agignore file"
 ln -s $DIR/agignore $HOME/.agignore
@@ -82,7 +83,8 @@ ln -s $DIR/pryrc $HOME/.pryrc
 echo "Linking gemrc file"
 ln -s $DIR/gemrc $HOME/.gemrc
 
-mkdir $HOME/.rbenv
+echo "Linking asdfrc file"
+ln -s $DIR/asdfrc $HOME/.asdfrc
 
 echo "Creating Git Template Folder"
 mkdir $HOME/.git-template
@@ -108,8 +110,6 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 
 echo "Writing homedir files"
 
-echo "Linking rbenv default-gems file file"
-ln -s $DIR/rbenv/default-gems $HOME/.rbenv/default-gems
 
 special_echo "Setting up $HOME/.zshrc"
 echo "source $DIR/zshrc\n source ./zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> $HOME/.zshrc

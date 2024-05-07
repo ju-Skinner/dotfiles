@@ -27,11 +27,6 @@ export PATH="$ADDON_PATH:$PATH"
 # Prevent HomeBrew from auto-updating
 export HOMEBREW_NO_AUTO_UPDATE=1
 
-# NVM plugin config
-export NVM_LAZY_LOAD=true
-export NVM_COMPLETION=true
-export NVM_AUTO_USE=true # Will run nvm use if .nvmrc found in directory
-
 # Pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
