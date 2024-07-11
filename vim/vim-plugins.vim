@@ -51,7 +51,7 @@ Plug 'rhysd/committia.vim'
 Plug 'sheerun/vim-polyglot'
 
 " Lean & mean status/tabline for vim that's light as ai
-Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 " Colorschemes {{{
@@ -75,7 +75,7 @@ call plug#end()
 " If you installed powerline via the Pip utility then this line is sufficient
 " see https://powerline.readthedocs.org/en/latest/installation/osx.html for
 " details
-source $HOME/.pyenv/versions/3.11.5/lib/python3.11/site-packages/powerline/bindings/vim/plugin/powerline.vim
+" source $HOME/.pyenv/versions/3.11.5/lib/python3.11/site-packages/powerline/bindings/vim/plugin/powerline.vim
 
 " Plugin settings:
 " Below are some sane defaults for a couple of the above plugins

@@ -18,6 +18,10 @@ brew install hub
 brew install wget
 brew tap homebrew/services
 
+special_echo "Install Oh-My-Zsh"
+sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+
+
 # terminal
 brew install iterm2
 brew install tmux
@@ -46,16 +50,6 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 # Z
 brew install z
-
-# WEECHAT
-# brew install weechat --with-aspell --with-curl --with-python --with-perl --with-ruby --with-lua --with-guile
-
-# echo "Linking weechat settings"
-# ln -sf $DIR/weechat/weechat.conf $HOME/.weechat/weechat.conf
-# ln -sf $DIR/weechat/buffers.conf $HOME/.weechat/buffers.conf
-
-special_echo "Install Oh-My-Zsh"
-sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 
 echo "Unpacking powerline_fonts"
 unzip powerline_fonts.zip
@@ -96,7 +90,7 @@ echo "Setting $HOME/.vim to link to $DIR/_vim directory"
 ln -s $DIR/vim $HOME/.vim
 
 echo "Installing NVM for Node"
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | zsh
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 
 echo "Installing Node latest"
 nvm install --latest-npm
@@ -106,7 +100,7 @@ git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/theme
 ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
 
 echo "Installing ZSH Syntax Highlighting"
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+brew install zsh-syntax-highlighting
 
 echo "Writing homedir files"
 

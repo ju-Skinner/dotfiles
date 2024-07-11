@@ -152,4 +152,7 @@ endif
 
 " vim:foldmethod=marker:foldlevel=0
 
-set rtp+=/usr/local/opt/fzf
+let g:airline_theme='solarized'
+let g:airline_solarized_bg='dark'
+
+set rtp+=/opt/homebrew/opt/fzf
