@@ -1,3 +1,1 @@
 legacy_version_file = yes
-always_keep_download = no
-ASDF_FORCE_PREPEND = yes
