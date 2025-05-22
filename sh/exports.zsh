@@ -21,7 +21,7 @@ export KEYTIMEOUT=1
 export SSH_ENV=$HOME/.ssh/environment
 
 # User configuration
-export ADDON_PATH="/opt/homebrew/bin:/opt/homebrew/opt/postgresql@13/bin:$GOPATH/bin:$HOME/.fastlane/bin:$HOME/.flutterio/bin"
+export ADDON_PATH="/opt/homebrew/bin:/opt/homebrew/opt/postgresql@15/bin:$GOPATH/bin:$HOME/.fastlane/bin:$HOME/.flutterio/bin"
 export PATH="$ADDON_PATH:$PATH"
 
 # Prevent HomeBrew from auto-updating
