@@ -75,7 +75,7 @@ call plug#end()
 " If you installed powerline via the Pip utility then this line is sufficient
 " see https://powerline.readthedocs.org/en/latest/installation/osx.html for
 " details
-source /usr/local/lib/python3.8/site-packages/powerline/bindings/vim/plugin/powerline.vim
+" source /usr/local/lib/python3.8/site-packages/powerline/bindings/vim/plugin/powerline.vim
 
 " Plugin settings:
 " Below are some sane defaults for a couple of the above plugins

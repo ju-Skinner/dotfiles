@@ -13,7 +13,7 @@ source ~/dotfiles/sh/alias.zsh
 source ~/dotfiles/sh/functions.zsh
 
 # Source powerline-status zsh file
-source /usr/local/lib/python3.8/site-packages/powerline/bindings/zsh/powerline.zsh
+# source /usr/local/lib/python3.8/site-packages/powerline/bindings/zsh/powerline.zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -71,26 +71,17 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 source $ZSH/oh-my-zsh.sh
 
 # ssh-add -K $HOME/.ssh/ju-skinner
-ssh-add --apple-use-keychain $HOME/.ssh/ju-skinner
+ssh-add --apple-use-keychain $HOME/.ssh/juskinner
 
 # User configuration
 
 ## completions
 source $HOME/dotfiles/sh/completions.zsh
 
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
-
 # load tmux
 #tmux
 
-eval "$(rbenv init - zsh)"
 _evalcache hub alias -s
-
-[ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
 
 timezsh() {
   shell=${1-$SHELL}

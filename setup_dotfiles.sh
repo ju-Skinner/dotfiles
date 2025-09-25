@@ -6,7 +6,7 @@ function special_echo {
 }
 
 special_echo "Install Homebrew"
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # BREW
 brew update
@@ -16,7 +16,6 @@ brew install git
 brew install git-extras
 brew install hub
 brew install wget
-brew tap homebrew/services
 
 # terminal
 brew install iterm2
@@ -96,20 +95,13 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | zsh
 echo "Installing Node latest"
 nvm install --latest-npm
 
-echo "Installing ZSH Spaceship theme"
-git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1
-ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
-
-echo "Installing ZSH Syntax Highlighting"
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-
 echo "Writing homedir files"
 
 echo "Linking rbenv default-gems file file"
 ln -s $DIR/rbenv/default-gems $HOME/.rbenv/default-gems
 
 special_echo "Setting up $HOME/.zshrc"
-echo "source $DIR/zshrc\n source ./zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> $HOME/.zshrc
+cp template_zshrc $HOME/.zshrc
 
 special_echo "Settting up $HOME/.tmux.conf"
 echo "source $DIR/tmux.conf" > $HOME/.tmux.conf
@@ -117,8 +109,22 @@ echo "source $DIR/tmux.conf" > $HOME/.tmux.conf
 special_echo "Overwriting up $HOME/.gitconfig"
 $echo -e "[include]\n  path = $DIR/gitconfig" > $HOME/.gitconfig
 
-echo "Installing ZSH AutoSuggestions"
+echo "Installing ZSH Spaceship theme"
+git clone https://github.com/denysdovhan/spaceship-prompt.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/spaceship-prompt --depth=1
+ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
+
+echo "Installing ZSH Syntax Highlighting"
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+echo "Installing Evalcache"
+git clone https://github.com/mroth/evalcache ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/evalcache
+
+echo "Installing ZSH Autosuggestions"
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
+echo "Installing ZSH NVM"
+git clone https://github.com/lukechilds/zsh-nvm ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-nvm
+
 
 echo "Setting up FZF"
 $(brew --prefix)/opt/fzf/install
