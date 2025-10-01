@@ -13,7 +13,7 @@ source ~/dotfiles/sh/alias.zsh
 source ~/dotfiles/sh/functions.zsh
 
 # Source powerline-status zsh file
-# source /usr/local/lib/python3.8/site-packages/powerline/bindings/zsh/powerline.zsh
+source ~/.zsh-powerline.sh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -64,7 +64,7 @@ DISABLE_AUTO_TITLE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(evalcache git ruby vscode zsh-syntax-highlighting zsh-autosuggestions zsh-nvm gitfast)
+plugins=(evalcache git ruby vscode zsh-syntax-highlighting zsh-autosuggestions zsh-nvm gitfast tmuxinator python)
 
 export PATH="$HOME/.rbenv/bin:$PATH"
 

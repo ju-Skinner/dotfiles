@@ -35,7 +35,6 @@ brew install mysql
 brew install node
 
 # VIM / TMUX Status bar
-pip install powerline-status
 pip install psutil
 
 # TMUX Plugin Manager
@@ -67,7 +66,10 @@ rm -rf powerline_fonts
 mkdir $HOME/.config
 
 echo "Link Powerline config files to homedirectory config folder"
-ln -s /usr/local/lib/python3.8/site-packages/powerline/config_files $HOME/.config/powerline
+# ln -s /usr/local/lib/python3.8/site-packages/powerline/config_files $HOME/.config/powerline
+
+echo "Installing Powerline for ZSH"
+curl https://raw.githubusercontent.com/riobard/zsh-powerline/master/zsh-powerline.sh > ~/.zsh-powerline.sh
 
 echo "Linking agignore file"
 ln -s $DIR/agignore $HOME/.agignore
