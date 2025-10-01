@@ -51,7 +51,7 @@ Plug 'rhysd/committia.vim'
 Plug 'sheerun/vim-polyglot'
 
 " Lean & mean status/tabline for vim that's light as ai
-Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 " Colorschemes {{{
