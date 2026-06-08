@@ -27,7 +27,7 @@ brew install the_silver_searcher
 brew install fzf  #https://github.com/junegunn/fzf
 
 # development
-brew install rbenv ruby-build rbenv-default-gems rbenv-use
+brew install ruby-build
 brew install python3
 brew install mysql
 

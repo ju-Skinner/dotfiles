@@ -64,9 +64,7 @@ DISABLE_AUTO_TITLE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(evalcache git ruby vscode zsh-syntax-highlighting zsh-autosuggestions zsh-nvm gitfast tmuxinator python)
-
-export PATH="$HOME/.rbenv/bin:$PATH"
+plugins=(evalcache git ruby vscode zsh-syntax-highlighting zsh-autosuggestions zsh-nvm gitfast tmuxinator python pip mise)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -87,3 +85,4 @@ timezsh() {
   shell=${1-$SHELL}
   for i in $(seq 1 10); do /usr/bin/time $shell -i -c exit; done
 }
+
